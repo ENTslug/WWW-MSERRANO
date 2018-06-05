@@ -1,0 +1,6 @@
+@import 'Const';
+@import '../pages';
+
+.page--landing {
+    @extend %page;
+}

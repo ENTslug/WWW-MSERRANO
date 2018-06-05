@@ -162,6 +162,92 @@ body {
 .tooltip__text {
   font-size: 14px;
   padding: 24px; }
+/*------------------------------------*\
+  # mserrano / Inverted Triangle CSS
+\*------------------------------------*/
+/*------------------------------------*\
+  # Variables
+\*------------------------------------*/
+/* --- Media Breakpoints --- */
+/* --- Colors --- */
+/*------------------------------------*\
+  # Tools
+    Note: use @include to use mixins.
+          use fn_name() to use functions.
+
+          Sass data types include:
+            + numbers
+            + strings
+            + colors
+            + booleans
+            + lists
+\*------------------------------------*/
+/* --- Functions --- */
+/* --- Mixins --- */
+/*------------------------------------*\
+  # Configurable Settings
+    Note: must be completed so that the
+          api_layer can work correctly.
+\*------------------------------------*/
+/* --- Spacing --- */
+/* --- Fonts --- */
+/* --- Colors --- */
+/*------------------------------------*\
+  # Communication Layer to App
+    Note: this is for REFERENCE ONLY!!
+\*------------------------------------*/
+/* --- Spacing --- */
+/* --- Fonts --- */
+/* --- Colors --- */
+/*------------------------------------*\
+  # mserrano / Inverted Triangle CSS
+\*------------------------------------*/
+/*------------------------------------*\
+  # Variables
+\*------------------------------------*/
+/* --- Media Breakpoints --- */
+/* --- Colors --- */
+/*------------------------------------*\
+  # Tools
+    Note: use @include to use mixins.
+          use fn_name() to use functions.
+
+          Sass data types include:
+            + numbers
+            + strings
+            + colors
+            + booleans
+            + lists
+\*------------------------------------*/
+/* --- Functions --- */
+/* --- Mixins --- */
+/*------------------------------------*\
+  # Configurable Settings
+    Note: must be completed so that the
+          api_layer can work correctly.
+\*------------------------------------*/
+/* --- Spacing --- */
+/* --- Fonts --- */
+/* --- Colors --- */
+/*------------------------------------*\
+  # Communication Layer to App
+    Note: this is for REFERENCE ONLY!!
+\*------------------------------------*/
+/* --- Spacing --- */
+/* --- Fonts --- */
+/* --- Colors --- */
+body {
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 12px;
+  background: url("/resources/img/wp_sitedown.jpg");
+  background-size: cover; }
+
+.page--landing .md-button {
+  background: rgba(0, 107, 182, 0.6);
+  color: #FFFFFF; }
+  .page--landing .md-button.md-raised:not([disabled]):hover, .page--landing .md-button.md-fab:not([disabled]):hover {
+    background: #004d83; }
 html, body {
   height: 100%;
   position: relative; }

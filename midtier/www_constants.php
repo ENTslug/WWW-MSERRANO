@@ -17,7 +17,10 @@ class www_constants extends page_base {
                 'Result' => cst_infrastructure::result,
                 'Pass'   => cst_infrastructure::pass,
                 'Fail'   => cst_infrastructure::fail,
-            )
+            ),
+            'P'              => array(
+                'Access' => cst_portfolio::p_has_access,
+            ),
         );
         return $return;
     }

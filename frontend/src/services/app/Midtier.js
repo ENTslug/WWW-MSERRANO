@@ -4,25 +4,16 @@ angular.module("www.services")
 
             // -- Service -- //
             return (self = {
-                www_constants: new Request.cached(function () {
+                my_portfolio: new Request.cached(function (has_access) {
                     var get = {}, post = {};
                     var config = {
-                        method: 'GET',
-                        url: '/www_constants',
+                        method: 'POST',
+                        url: '/landing/my_portfolio',
                         params: get,
                         data: post,
                     };
-
-                    return $http(config);
-                }),
-                checker: new Request.standard(function () {
-                    var get = {}, post = {};
-                    var config = {
-                        method: 'GET',
-                        url: '/checker',
-                        params: get,
-                        data: post,
-                    };
+                    
+                    post[Const.P.Access] = (has_access === true);
 
                     return $http(config);
                 }),
