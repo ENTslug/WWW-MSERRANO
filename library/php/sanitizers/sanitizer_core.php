@@ -27,6 +27,7 @@ class sanitizer_core {
                 break;
             case cst_sanitizer::sane_string:
                 $filter  = FILTER_SANITIZE_STRING;
+                $value = str_replace('../', '', $value);
                 $options = array('options' => array('default' => null));
                 break;
             case cst_sanitizer::sane_integer:
