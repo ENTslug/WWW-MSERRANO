@@ -2,8 +2,12 @@ angular.module("www.controllers")
         .controller("LandingCtrl", function (Const, Midtier) {
             var _this = this;
 
+            _this.projects = {
+                immutable: null,
+            };
+
             var has_access = true;
             Midtier.my_portfolio.call(has_access).then(function () {
-                var res = Midtier.my_portfolio.get_data("Projects")
+                _this.projects.immutable = Midtier.my_portfolio.get_data(Const.P.Projects);
             });
         });

@@ -3,4 +3,31 @@
 
 .page--landing {
     @extend %page;
+    
+    .action-menu {
+        min-width: 36%;
+        margin: $unit*8 0;
+        padding: $unit*4;
+
+        background: $white;
+        border-radius: $unit/4;
+        font-size: 32px;
+        text-align: center;
+
+        opacity: 0.96;
+
+        .sitedown__decor {
+            font-weight: 600;
+        }
+        .sitedown__text {
+        }
+    }
+    .view-grid {
+        height: 100%;
+        width: 60%;
+    }
+    .view-grid__item {
+        width: 100px;
+        background: $white;
+    }
 }

@@ -36,24 +36,56 @@ class my_portfolio extends page_base {
         $return = array();
         if ($has_access === true) {
             $return = array(
-                // DevOps
+                array(
+                    cst_portfolio::p_title => 'Cygnus Management, LLC',
+                    cst_portfolio::p_url   => 'cygnusmgmt-production.herokuapp.com',
+                    cst_portfolio::p_thumb => '',
+                ),
+                array(
+                    cst_portfolio::p_title => 'www.hospitalitypulse.net (2014-2017)',
+                    cst_portfolio::p_url   => '',
+                    cst_portfolio::p_thumb => '',
+                ),
+                array(
+                    cst_portfolio::p_title => 'mobilePulse',
+                    cst_portfolio::p_url   => '',
+                    cst_portfolio::p_thumb => '',
+                ),
+                array(
+                    cst_portfolio::p_title => 'Internal Console',
+                    cst_portfolio::p_url   => '',
+                    cst_portfolio::p_thumb => '',
+                ),
+                array(
+                    cst_portfolio::p_title => 'pulseBooker Consumer Version',
+                    cst_portfolio::p_thumb => '',
+                ),
+                array(
+                    cst_portfolio::p_title => 'pulseLink (2018)',
+                    cst_portfolio::p_thumb => '',
+                ),
+                array(
+                    cst_portfolio::p_title => 'pulseBooker Central Reservation Office (CRO)',
+                    cst_portfolio::p_thumb => '',
+                ),
+                array(
+                    cst_portfolio::p_title => 'LAB-MSERRANO',
+                    cst_portfolio::p_url   => 'lab.mserrano.net',
+                    cst_portfolio::p_thumb => '',
+                ),
                 array(
                     cst_portfolio::p_title => 'DevOps',
+                    cst_portfolio::p_url   => '',
                     cst_portfolio::p_thumb => '',
                 ),
-                // LAB-MSERRANO
                 array(
-                    cst_portfolio::p_title => 'lab.mserrano.net',
+                    cst_portfolio::p_title => 'WWW-MSERRANO',
+                    cst_portfolio::p_url   => 'www.mserrano.net',
                     cst_portfolio::p_thumb => '',
                 ),
-                // WWW-MSERRANO
                 array(
-                    cst_portfolio::p_title => 'www.mserrano.net',
-                    cst_portfolio::p_thumb => '',
-                ),
-                // DOCS-MSERRANO
-                array(
-                    cst_portfolio::p_title => 'docs.mserrano.net',
+                    cst_portfolio::p_title => 'DOCS-MSERRANO',
+                    cst_portfolio::p_url   => 'docs.mserrano.net',
                     cst_portfolio::p_thumb => '',
                 ),
             );

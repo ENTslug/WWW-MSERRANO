@@ -19,7 +19,9 @@ class www_constants extends page_base {
                 'Fail'   => cst_infrastructure::fail,
             ),
             'P'              => array(
-                'Access' => cst_portfolio::p_has_access,
+                'Access'   => cst_portfolio::p_has_access,
+                'Projects' => cst_portfolio::p_list_project,
+                'Title'    => cst_portfolio::p_title,
             ),
         );
         return $return;
