@@ -39,7 +39,7 @@ class my_portfolio extends page_base {
                 array(
                     cst_portfolio::p_title => 'Cygnus Management, LLC',
                     cst_portfolio::p_url   => 'cygnusmgmt-production.herokuapp.com',
-                    cst_portfolio::p_thumb => '',
+                    cst_portfolio::p_thumb => '/resources/portfolio/cygnus/cygnus_thumb.png',
                 ),
                 array(
                     cst_portfolio::p_title => 'www.hospitalitypulse.net (2014-2017)',

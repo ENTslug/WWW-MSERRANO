@@ -21,6 +21,7 @@ class www_constants extends page_base {
             'P'              => array(
                 'Access'   => cst_portfolio::p_has_access,
                 'Projects' => cst_portfolio::p_list_project,
+                'Thumb'    => cst_portfolio::p_thumb,
                 'Title'    => cst_portfolio::p_title,
             ),
         );
