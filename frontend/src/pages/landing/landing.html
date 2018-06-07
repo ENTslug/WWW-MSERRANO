@@ -1,14 +1,15 @@
 <div class="page--landing">
+    <md-toolbar class="page__toolbar"
+                layout="row" layout-align="space-between center"
+                md-scroll-shrink="true">
+        <div class="toolbar__leftside">
+            <span class="toolbar__logo"
+                  translate="app_label"></span>
+        </div>
+        <div class="toolbar__rightside"></div>
+    </md-toolbar>
     <md-content class="page__content"
                 layout="column" layout-align="begin center">
-        <md-toolbar class="page__toolbar"
-                    layout="row" layout-align="space-between center">
-            <div class="leftside">
-                <span class="leftside__logo"
-                      translate="app_label"></span>
-            </div>
-            <div class="rightside"></div>
-        </md-toolbar>
         <md-whiteframe class="action-menu md-whiteframe-12dp">
             <span class="sitedown__decor" translate="<"></span>
             <span class="sitedown__text" translate="sitedown"></span>
@@ -28,5 +29,6 @@
                 </md-grid-tile-header>
             </md-grid-tile>
         </md-grid-list>
+        <www-mserrano-footer></www-mserrano-footer>
     </md-content>
 </div>

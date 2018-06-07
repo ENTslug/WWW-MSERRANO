@@ -1,0 +1,15 @@
+@import 'Const';
+
+$footer-color-prim: #262626;
+$footer-color-text: #c7c7c7;
+
+.page__footer {
+    min-height: 62px;
+    width: 100%;
+    background: $footer-color-prim;
+
+    .footer__leftside {
+        padding: $unit $unit*2;
+        color: $footer-color-text;
+    }
+}

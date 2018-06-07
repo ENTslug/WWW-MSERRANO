@@ -5,5 +5,6 @@ angular.module("www.blocks")
                 , "app_label": "Mark Anthony Serrano"
                 , "sitedown": "Site Down"
                 , "more_info_message": "Working on it!"
+                , "footer_info": "Engineered in Watsonville, CA. Mark Anthony Serrano. Est {{ year }}."
             });
         });

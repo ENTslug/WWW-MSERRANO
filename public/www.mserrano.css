@@ -78,6 +78,50 @@ body {
 /* --- Spacing --- */
 /* --- Fonts --- */
 /* --- Colors --- */
+.page__footer {
+  min-height: 62px;
+  width: 100%;
+  background: #262626; }
+  .page__footer .footer__leftside {
+    padding: 8px 16px;
+    color: #c7c7c7; }
+/*------------------------------------*\
+  # mserrano / Inverted Triangle CSS
+\*------------------------------------*/
+/*------------------------------------*\
+  # Variables
+\*------------------------------------*/
+/* --- Media Breakpoints --- */
+/* --- Colors --- */
+/*------------------------------------*\
+  # Tools
+    Note: use @include to use mixins.
+          use fn_name() to use functions.
+
+          Sass data types include:
+            + numbers
+            + strings
+            + colors
+            + booleans
+            + lists
+\*------------------------------------*/
+/* --- Functions --- */
+/* --- Mixins --- */
+/*------------------------------------*\
+  # Configurable Settings
+    Note: must be completed so that the
+          api_layer can work correctly.
+\*------------------------------------*/
+/* --- Spacing --- */
+/* --- Fonts --- */
+/* --- Colors --- */
+/*------------------------------------*\
+  # Communication Layer to App
+    Note: this is for REFERENCE ONLY!!
+\*------------------------------------*/
+/* --- Spacing --- */
+/* --- Fonts --- */
+/* --- Colors --- */
 /*------------------------------------*\
   # mserrano / Inverted Triangle CSS
 \*------------------------------------*/
@@ -126,7 +170,7 @@ body {
   background: rgba(0, 107, 182, 0.6);
   border-bottom: 6px solid rgba(255, 196, 32, 0.6);
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); }
-  .page--landing .page__toolbar .leftside {
+  .page--landing .page__toolbar .toolbar__leftside {
     margin-left: 8px;
     padding: 8px; }
 
@@ -244,7 +288,7 @@ body {
   background: rgba(0, 107, 182, 0.6);
   border-bottom: 6px solid rgba(255, 196, 32, 0.6);
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); }
-  .page--sitedown .page__toolbar .leftside {
+  .page--sitedown .page__toolbar .toolbar__leftside {
     margin-left: 8px;
     padding: 8px; }
 
