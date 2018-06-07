@@ -32,11 +32,15 @@ module.exports = (env, argv) => {
                 {test: /\.(html)$/, loader: "angular-templatecache-loader?module=" + app_name},
                 {test: /^((?!(\.spec)).)*\.scss$/, use: extract_src_styles.extract([
                         {
-                            loader: "css-loader"
+                            loader: "css-loader",
+                            options: {minimize: (production === true)},
                         },
                         {
                             loader: "sass-loader",
-                            options: {includePaths: [path.resolve(__dirname, "./library/styles")]}
+                            options: {
+                                includePaths: [path.resolve(__dirname, "./library/styles")],
+                                outputStyle: (production === true ? 'compressed' : 'nested'),
+                            },
                         }
                     ])},
                 {test: /\.spec\.scss$/, use: extract_ut_styles.extract([
