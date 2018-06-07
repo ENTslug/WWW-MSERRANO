@@ -36,12 +36,21 @@ module.exports = (env, argv) => {
                             options: {minimize: (production === true)},
                         },
                         {
+                            loader: "postcss-loader",
+                            options: {
+                                plugins: (loader) => [
+                                  require('autoprefixer')(),
+                                  require('postcss-discard-comments')({removeAll: true}),
+                                ] 
+                            },
+                        },
+                        {
                             loader: "sass-loader",
                             options: {
                                 includePaths: [path.resolve(__dirname, "./library/styles")],
                                 outputStyle: (production === true ? 'compressed' : 'nested'),
                             },
-                        }
+                        },
                     ])},
                 {test: /\.spec\.scss$/, use: extract_ut_styles.extract([
                         {
@@ -54,7 +63,7 @@ module.exports = (env, argv) => {
                                     path.resolve(__dirname, "./frontend/tests/styles"),
                                     path.resolve(__dirname, "./node_modules/sass-true/sass"),
                                 ]}
-                        }
+                        },
                     ])},
             ],
         },

@@ -48,6 +48,8 @@
     "karma-webpack": "3.0.0",
     "ng-annotate-loader": "0.6.1",
     "node-sass": "4.8.3",
+    "postcss-discard-comments": "2.0.4",
+    "postcss-loader": "2.1.5",
     "sass-loader": "7.0.3",
     "sass-true": "4.0.0",
     "style-loader": "0.20.3",
