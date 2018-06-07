@@ -2,6 +2,7 @@
 
 class output {
 
+    const html    = 'html';
     const raw     = 'raw';
     const json    = 'json';
     const angular = 'angular';
@@ -43,6 +44,10 @@ class output {
             case output::raw:
                 $data = print_r($content, true);
                 $this->add_header('Content-Type: text/plain');
+                break;
+            case output::html:
+                $data = $content;
+                $this->add_header('Content-Type: text/html');
                 break;
         }
         if (isset($data) === true) {
