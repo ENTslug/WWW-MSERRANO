@@ -6,9 +6,17 @@ class index extends page_base {
         $app_name       = cst_infrastructure::app_name;
         $default_layout = sprintf('%s/index.html', __DIR__);
         $template       = file_get_contents($default_layout);
-        $replace        = array(
-            '%mtime_src_js%'  => $this->modified_time($app_name . '.mserrano.js'),
-            '%mtime_src_css%' => $this->modified_time($app_name . '.mserrano.css'),
+
+        $args    = array(
+            'js'    => sprintf('%s.mserrano.%s.js', $app_name, $this->uniq_fingerprint($app_name . '.mserrano.js')),
+            'css'   => sprintf('%s.mserrano.%s.css', $app_name, $this->uniq_fingerprint($app_name . '.mserrano.css')),
+            'const' => '/www_constants',
+            'app'   => $app_name,
+        );
+        $replace = array(
+            '%_MSERRANO-DEV_%' => sprintf('/apploader.min.js?%s', http_build_query($args)),
+            '%_VENDOR-CSS_%'   => $this->uniq_fingerprint('vendor.mserrano.css'),
+            '%_VENDOR-JS_%'    => $this->uniq_fingerprint('vendor.mserrano.js'),
         );
 
         $this->response = str_replace(
@@ -21,9 +29,10 @@ class index extends page_base {
         return sprintf('%s/%s', __DIR__, $file);
     }
 
-    private function modified_time($file) {
+    private function uniq_fingerprint($file) {
         $public_path = sprintf('../public/%s', $file);
-        return filemtime($this->fullpath($public_path));
+        // cache busting: use the middle 10 digits of its sha1 hash
+        return substr(sha1_file($this->fullpath($public_path)), 15, 10);
     }
 
 }
