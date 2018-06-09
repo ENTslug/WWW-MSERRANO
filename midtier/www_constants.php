@@ -14,9 +14,10 @@ class www_constants extends page_base {
                 'Date' => date('Y-m-d'),
             ),
             'Infrastructure' => array(
-                'Result' => cst_infrastructure::result,
-                'Pass'   => cst_infrastructure::pass,
-                'Fail'   => cst_infrastructure::fail,
+                'AppName' => cst_infrastructure::app_name,
+                'Result'  => cst_infrastructure::result,
+                'Pass'    => cst_infrastructure::pass,
+                'Fail'    => cst_infrastructure::fail,
             ),
             'P'              => array(
                 'GitHub'       => cst_portfolio::p_github,

@@ -1,25 +1,6 @@
-<md-card class="portfolio-project">
-    <md-card-header>
-        <md-card-avatar>
-            <!--<img src="img/logo.svg"/>-->
-        </md-card-avatar>
-        <md-card-header-text>
-            <span class="md-title"
-                  ng-bind="template.org"></span>
-            <span class="md-subhead"
-                  ng-bind="template.url"></span>
-        </md-card-header-text>
-    </md-card-header>
-    <img class="md-card-image" 
-         ng-src="{{ template.thumbnail}}"
-         alt="{{ template.title | translate }}" />
-    <md-card-title>
-        <md-card-title-text>
-            <span class="md-headline"
-                  translate="{{ template.title }}"></span>
-        </md-card-title-text>
-    </md-card-title>
-    <md-card-content>
-        <p translate="{{ template.description }}"></p>
-    </md-card-content>
-</md-card>
+<div class="portfolio-project-wrapper">
+    <div class="portfolio-project">
+        <span translate="{{ template.title }}"></span>
+        
+    </div>
+</div>

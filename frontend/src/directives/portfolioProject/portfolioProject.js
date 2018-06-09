@@ -5,6 +5,7 @@ angular.module("www.directives")
                 replace: true,
                 templateUrl: 'frontend/src/directives/portfolioProject/portfolioProject.html',
                 scope: {
+                    side: '@',
                     info: '=',
                 },
                 link: linkFn,

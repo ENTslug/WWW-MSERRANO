@@ -1,30 +1,19 @@
 <div class="page--landing"
      layout="column">
-    <md-toolbar class="page__toolbar"
-                layout="row" layout-align="space-between center"
-                md-scroll-shrink="true">
-        <div class="toolbar__leftside">
-            <span class="toolbar__logo"
-                  translate="app_label"></span>
-        </div>
-        <div class="toolbar__rightside"></div>
-    </md-toolbar>
-    <md-content class="timeline"
-                layout="column">
+    <www-mserrano-toolbar></www-mserrano-toolbar>
+    <md-content class="page__content"
+                layout="column" layout-align="start center">
+        <md-whiteframe class="action-menu md-whiteframe-12dp">
+            <span class="sitedown__decor" translate="<"></span>
+            <span class="sitedown__text" translate="sitedown"></span>
+            <span class="sitedown__decor" translate=">"></span>
+        </md-whiteframe>
         <div class="timeline"
-             layout-fill
-             layout="row" layout-align="start center">
-            <div class="timeline__container--left"
-                 layout="column">
-                <portfolio-project ng-repeat="project_info in page.portfolio.left"
-                                   data-info="project_info"></portfolio-project>
-            </div>
-            <div class="timeline__vertical-line"></div>
-            <div class="timeline__container--right"
-                 layout="column">
-                <portfolio-project ng-repeat="project_info in page.portfolio.right"
-                                   data-info="project_info"></portfolio-project>
-            </div>
+             layout="column">
+            <portfolio-project class="timeline__entry"
+                               ng-repeat="project_info in page.portfolio.immutable"
+                               data-side="{{ $even === true}}"
+                               data-info="project_info"></portfolio-project>
         </div>
         <www-mserrano-footer></www-mserrano-footer>
     </md-content>

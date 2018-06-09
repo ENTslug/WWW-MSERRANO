@@ -3,10 +3,11 @@
 $footer-color-prim: #262626;
 $footer-color-text: #c7c7c7;
 
-.page__footer {
+.footer {
     min-height: 62px;
     width: 100%;
     background: $footer-color-prim;
+    color: $white;
 
     .footer__leftside {
         padding: $unit $unit*2;

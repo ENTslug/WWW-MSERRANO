@@ -22,31 +22,13 @@
         .sitedown__text {
         }
     }
-    .view-grid {
-        height: 100%;
-        width: 60%;
-    }
-    .view-grid__item {
-        width: 100px;
-        background: $white;
-    }
 }
 
 .timeline {
-    background: transparent;
+    display: block;
+    width: 100%;
     
-    [class^="timeline__container"] {
-        
-    }
-    .timeline__left {
-        
-    }
-    .timeline__vertical-line {
-        min-height: 100%;
-        width: 20px;
-        background: $white;
-    }
-    .timeline__right {
-        
+    .timeline__entry {
+        min-height: 100px;
     }
 }
