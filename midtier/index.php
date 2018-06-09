@@ -10,7 +10,7 @@ class index extends page_base {
         $args    = array(
             'js'    => sprintf('%s.mserrano.%s.js', $app_name, $this->uniq_fingerprint($app_name . '.mserrano.js')),
             'css'   => sprintf('%s.mserrano.%s.css', $app_name, $this->uniq_fingerprint($app_name . '.mserrano.css')),
-            'const' => '/www_constants',
+            'const' => sprintf('/%s_constants', $app_name),
             'app'   => $app_name,
         );
         $replace = array(

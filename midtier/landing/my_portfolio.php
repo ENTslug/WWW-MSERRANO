@@ -21,11 +21,11 @@ class my_portfolio extends page_base {
 
         if ($continue === true) {
             $has_access   = $this->sanitizer->get('post', cst_portfolio::p_has_access);
-            $list_project = $this->retrieve_projects($has_access);
+            $project_info = $this->retrieve_projects($has_access);
         }
 
         if ($continue === true) {
-            $this->response[cst_portfolio::p_list_project] = $list_project;
+            $this->response[cst_portfolio::p_project_info] = $project_info;
             $this->set_response_pass();
         }
         $output->format($this->response, output::angular);
@@ -36,57 +36,60 @@ class my_portfolio extends page_base {
         $return = array();
         if ($has_access === true) {
             $return = array(
-                array(
-                    cst_portfolio::p_title => 'Cygnus Management, LLC',
-                    cst_portfolio::p_url   => 'cygnusmgmt-production.herokuapp.com',
-                    cst_portfolio::p_thumb => '/resources/portfolio/cygnus/cygnus_thumb.png',
+                cst_portfolio::key_cygnus          => array(
+                    cst_portfolio::p_organization => cst_portfolio::org_volunteer,
+                    cst_portfolio::p_url          => 'cygnusmgmt-production.herokuapp.com',
+                    cst_portfolio::p_github       => 'github.com/mmserran/cygnusmgmt',
                 ),
-                array(
-                    cst_portfolio::p_title => 'www.hospitalitypulse.net (2014-2017)',
-                    cst_portfolio::p_url   => '',
-                    cst_portfolio::p_thumb => '',
+                cst_portfolio::key_hpl             => array(
+                    cst_portfolio::p_organization => cst_portfolio::org_hpulse,
+                    cst_portfolio::p_url          => cst_portfolio::p_is_private,
+                    cst_portfolio::p_github       => cst_portfolio::p_is_private,
                 ),
-                array(
-                    cst_portfolio::p_title => 'mobilePulse',
-                    cst_portfolio::p_url   => '',
-                    cst_portfolio::p_thumb => '',
+                cst_portfolio::key_pulsemobile     => array(
+                    cst_portfolio::p_organization => cst_portfolio::org_hpulse,
+                    cst_portfolio::p_url          => cst_portfolio::p_is_private,
+                    cst_portfolio::p_github       => cst_portfolio::p_is_private,
                 ),
-                array(
-                    cst_portfolio::p_title => 'Internal Console',
-                    cst_portfolio::p_url   => '',
-                    cst_portfolio::p_thumb => '',
+                cst_portfolio::key_internalc       => array(
+                    cst_portfolio::p_organization => cst_portfolio::org_hpulse,
+                    cst_portfolio::p_url          => cst_portfolio::p_is_private,
+                    cst_portfolio::p_github       => cst_portfolio::p_is_private,
                 ),
-                array(
-                    cst_portfolio::p_title => 'pulseBooker Consumer Version',
-                    cst_portfolio::p_thumb => '',
+                cst_portfolio::key_pulsebooker     => array(
+                    cst_portfolio::p_organization => cst_portfolio::org_hpulse,
+                    cst_portfolio::p_url          => cst_portfolio::p_is_private,
+                    cst_portfolio::p_github       => cst_portfolio::p_is_private,
                 ),
-                array(
-                    cst_portfolio::p_title => 'pulseLink (2018)',
-                    cst_portfolio::p_thumb => '',
+                cst_portfolio::key_pulselink       => array(
+                    cst_portfolio::p_organization => cst_portfolio::org_hpulse,
+                    cst_portfolio::p_url          => cst_portfolio::p_is_private,
+                    cst_portfolio::p_github       => cst_portfolio::p_is_private,
                 ),
-                array(
-                    cst_portfolio::p_title => 'pulseBooker Central Reservation Office (CRO)',
-                    cst_portfolio::p_thumb => '',
+                cst_portfolio::key_pulsebooker_cro => array(
+                    cst_portfolio::p_organization => cst_portfolio::org_hpulse,
+                    cst_portfolio::p_url          => cst_portfolio::p_is_private,
+                    cst_portfolio::p_github       => cst_portfolio::p_is_private,
                 ),
-                array(
-                    cst_portfolio::p_title => 'LAB-MSERRANO',
-                    cst_portfolio::p_url   => 'lab.mserrano.net',
-                    cst_portfolio::p_thumb => '',
+                cst_portfolio::key_lab             => array(
+                    cst_portfolio::p_organization => cst_portfolio::org_mserrano,
+                    cst_portfolio::p_url          => 'lab.mserrano.net',
+                    cst_portfolio::p_github       => 'github.com/mserrano-dev/LAB-MSERRANO',
                 ),
-                array(
-                    cst_portfolio::p_title => 'DevOps',
-                    cst_portfolio::p_url   => '',
-                    cst_portfolio::p_thumb => '',
+                cst_portfolio::key_devops          => array(
+                    cst_portfolio::p_organization => cst_portfolio::org_mserrano,
+                    cst_portfolio::p_url          => cst_portfolio::p_not_avail,
+                    cst_portfolio::p_github       => 'github.com/mserrano-dev/DevOps',
                 ),
-                array(
-                    cst_portfolio::p_title => 'WWW-MSERRANO',
-                    cst_portfolio::p_url   => 'www.mserrano.net',
-                    cst_portfolio::p_thumb => '',
+                cst_portfolio::key_www             => array(
+                    cst_portfolio::p_organization => cst_portfolio::org_mserrano,
+                    cst_portfolio::p_url          => 'www.mserrano.net',
+                    cst_portfolio::p_github       => 'github.com/mserrano-dev/WWW-MSERRANO',
                 ),
-                array(
-                    cst_portfolio::p_title => 'DOCS-MSERRANO',
-                    cst_portfolio::p_url   => 'docs.mserrano.net',
-                    cst_portfolio::p_thumb => '',
+                cst_portfolio::key_docs            => array(
+                    cst_portfolio::p_organization => cst_portfolio::org_mserrano,
+                    cst_portfolio::p_url          => 'docs.mserrano.net',
+                    cst_portfolio::p_github       => 'github.com/mserrano-dev/DOCS-MSERRANO',
                 ),
             );
         }

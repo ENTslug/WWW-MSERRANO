@@ -12,8 +12,8 @@ angular.module("www.services")
                         params: get,
                         data: post,
                     };
-                    
-                    post[Const.P.Access] = (has_access === true);
+
+                    post[Const.P.HasAccess] = (has_access === true);
 
                     return $http(config);
                 }),

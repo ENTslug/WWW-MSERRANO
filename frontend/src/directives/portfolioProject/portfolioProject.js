@@ -5,7 +5,8 @@ angular.module("www.directives")
                 replace: true,
                 templateUrl: 'frontend/src/directives/portfolioProject/portfolioProject.html',
                 scope: {
-                    thumb: '@',
+                    key: '@',
+                    info: '=',
                 },
                 link: linkFn,
             };
@@ -14,8 +15,16 @@ angular.module("www.directives")
             // -- Functions -- //
             function linkFn(scope, elem, attrs) {
                 elem.css({
-                    "background": "url('" + scope.thumb + "')",
+                    "background": __background_url(scope.key),
                     "background-size": "cover",
                 });
+            }
+
+            // -- Helpers -- //
+            function __background_url(key) {
+                var base_path = '/resources/portfolio/' + key + '/';
+                var filename = key + '_thumb_lo.png';
+
+                return "url('" + base_path + filename + "')";
             }
         });

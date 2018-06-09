@@ -8,6 +8,6 @@ angular.module("www.controllers")
 
             var has_access = true;
             Midtier.my_portfolio.call(has_access).then(function () {
-                _this.projects.immutable = Midtier.my_portfolio.get_data(Const.P.Projects);
+                _this.projects.immutable = Midtier.my_portfolio.get_data(Const.P.ProjectInfo);
             });
         });
