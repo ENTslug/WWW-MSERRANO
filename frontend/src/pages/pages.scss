@@ -7,20 +7,9 @@ body {
 
     background: url('/resources/img/wp_sitedown.jpg');
     background-size: cover;
-}
-
-%page {
+    
     .page__content {
         height: 100vh;
         background: transparent;
-    }
-    .md-button {
-        background: rgba($color-primary, 0.6);
-        color: $white;
-
-        &.md-raised:not([disabled]):hover,
-            &.md-fab:not([disabled]):hover {
-            background: $color-primary-dark10;
-        }
     }
 }

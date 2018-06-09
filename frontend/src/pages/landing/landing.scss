@@ -1,8 +1,6 @@
 @import 'Const';
-@import '../pages';
 
 .page--landing {
-    @extend %page;
 
     .action-menu {
         min-width: 36%;

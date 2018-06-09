@@ -1,8 +1,6 @@
 @import 'Const';
-@import '../pages';
 
 .page--sitedown {
-    @extend %page;
 
     .sitedown {
         min-width: 36%;
