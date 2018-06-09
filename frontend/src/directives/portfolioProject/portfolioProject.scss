@@ -1,6 +1,9 @@
 @import 'Const';
 
 .portfolio-project {
-    height: 100%;
-    width: 100%;
+    margin: $unit*8;
+    
+    .md-card-image {
+        padding: $unit/4;
+    }
 }

@@ -3,7 +3,7 @@
 
 .page--landing {
     @extend %page;
-    
+
     .action-menu {
         min-width: 36%;
         margin: $unit*8 0;
@@ -29,5 +29,24 @@
     .view-grid__item {
         width: 100px;
         background: $white;
+    }
+}
+
+.timeline {
+    background: transparent;
+    
+    [class^="timeline__container"] {
+        
+    }
+    .timeline__left {
+        
+    }
+    .timeline__vertical-line {
+        min-height: 100%;
+        width: 20px;
+        background: $white;
+    }
+    .timeline__right {
+        
     }
 }

@@ -5,6 +5,7 @@ interface cst_portfolio {
     const p_github            = 'github';
     const p_has_access        = 'has_access';
     const p_is_private        = 'is_private';
+    const p_key               = 'key';
     const p_project_info      = 'project_info';
     const p_not_avail         = 'n/a';
     const p_organization      = 'organization';
@@ -15,7 +16,7 @@ interface cst_portfolio {
     const org_mserrano        = 'mserrano-dev';
     //
     const key_cygnus          = 'cygnus';
-    const key_hpl             = 'hpl_com';
+    const key_hpl_com         = 'hpl_com';
     const key_pulsemobile     = 'pulsemobile';
     const key_internalc       = 'internalc';
     const key_pulsebooker     = 'pulsebooker';

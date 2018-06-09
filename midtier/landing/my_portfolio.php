@@ -36,61 +36,72 @@ class my_portfolio extends page_base {
         $return = array();
         if ($has_access === true) {
             $return = array(
-                cst_portfolio::key_cygnus          => array(
+                array(
+                    cst_portfolio::p_key          => cst_portfolio::key_cygnus,
                     cst_portfolio::p_organization => cst_portfolio::org_volunteer,
                     cst_portfolio::p_url          => 'cygnusmgmt-production.herokuapp.com',
                     cst_portfolio::p_github       => 'github.com/mmserran/cygnusmgmt',
                 ),
-                cst_portfolio::key_hpl             => array(
+                array(
+                    cst_portfolio::p_key          => cst_portfolio::key_hpl_com,
                     cst_portfolio::p_organization => cst_portfolio::org_hpulse,
                     cst_portfolio::p_url          => cst_portfolio::p_is_private,
                     cst_portfolio::p_github       => cst_portfolio::p_is_private,
                 ),
-                cst_portfolio::key_pulsemobile     => array(
+                array(
+                    cst_portfolio::p_key          => cst_portfolio::key_pulsemobile,
                     cst_portfolio::p_organization => cst_portfolio::org_hpulse,
                     cst_portfolio::p_url          => cst_portfolio::p_is_private,
                     cst_portfolio::p_github       => cst_portfolio::p_is_private,
                 ),
-                cst_portfolio::key_internalc       => array(
+                array(
+                    cst_portfolio::p_key          => cst_portfolio::key_internalc,
                     cst_portfolio::p_organization => cst_portfolio::org_hpulse,
                     cst_portfolio::p_url          => cst_portfolio::p_is_private,
                     cst_portfolio::p_github       => cst_portfolio::p_is_private,
                 ),
-                cst_portfolio::key_pulsebooker     => array(
+                array(
+                    cst_portfolio::p_key          => cst_portfolio::key_pulsebooker,
                     cst_portfolio::p_organization => cst_portfolio::org_hpulse,
                     cst_portfolio::p_url          => cst_portfolio::p_is_private,
                     cst_portfolio::p_github       => cst_portfolio::p_is_private,
                 ),
-                cst_portfolio::key_pulselink       => array(
+                array(
+                    cst_portfolio::p_key          => cst_portfolio::key_pulselink,
                     cst_portfolio::p_organization => cst_portfolio::org_hpulse,
                     cst_portfolio::p_url          => cst_portfolio::p_is_private,
                     cst_portfolio::p_github       => cst_portfolio::p_is_private,
                 ),
-                cst_portfolio::key_pulsebooker_cro => array(
+                array(
+                    cst_portfolio::p_key          => cst_portfolio::key_pulsebooker_cro,
                     cst_portfolio::p_organization => cst_portfolio::org_hpulse,
                     cst_portfolio::p_url          => cst_portfolio::p_is_private,
                     cst_portfolio::p_github       => cst_portfolio::p_is_private,
                 ),
-                cst_portfolio::key_lab             => array(
-                    cst_portfolio::p_organization => cst_portfolio::org_mserrano,
-                    cst_portfolio::p_url          => 'lab.mserrano.net',
-                    cst_portfolio::p_github       => 'github.com/mserrano-dev/LAB-MSERRANO',
-                ),
-                cst_portfolio::key_devops          => array(
-                    cst_portfolio::p_organization => cst_portfolio::org_mserrano,
-                    cst_portfolio::p_url          => cst_portfolio::p_not_avail,
-                    cst_portfolio::p_github       => 'github.com/mserrano-dev/DevOps',
-                ),
-                cst_portfolio::key_www             => array(
-                    cst_portfolio::p_organization => cst_portfolio::org_mserrano,
-                    cst_portfolio::p_url          => 'www.mserrano.net',
-                    cst_portfolio::p_github       => 'github.com/mserrano-dev/WWW-MSERRANO',
-                ),
-                cst_portfolio::key_docs            => array(
-                    cst_portfolio::p_organization => cst_portfolio::org_mserrano,
-                    cst_portfolio::p_url          => 'docs.mserrano.net',
-                    cst_portfolio::p_github       => 'github.com/mserrano-dev/DOCS-MSERRANO',
-                ),
+//                array(
+//                    cst_portfolio::p_key          => cst_portfolio::key_lab,
+//                    cst_portfolio::p_organization => cst_portfolio::org_mserrano,
+//                    cst_portfolio::p_url          => 'lab.mserrano.net',
+//                    cst_portfolio::p_github       => 'github.com/mserrano-dev/LAB-MSERRANO',
+//                ),
+//                array(
+//                    cst_portfolio::p_key          => cst_portfolio::key_devops,
+//                    cst_portfolio::p_organization => cst_portfolio::org_mserrano,
+//                    cst_portfolio::p_url          => cst_portfolio::p_not_avail,
+//                    cst_portfolio::p_github       => 'github.com/mserrano-dev/DevOps',
+//                ),
+//                array(
+//                    cst_portfolio::p_key          => cst_portfolio::key_www,
+//                    cst_portfolio::p_organization => cst_portfolio::org_mserrano,
+//                    cst_portfolio::p_url          => 'www.mserrano.net',
+//                    cst_portfolio::p_github       => 'github.com/mserrano-dev/WWW-MSERRANO',
+//                ),
+//                array(
+//                    cst_portfolio::p_key          => cst_portfolio::key_docs,
+//                    cst_portfolio::p_organization => cst_portfolio::org_mserrano,
+//                    cst_portfolio::p_url          => 'docs.mserrano.net',
+//                    cst_portfolio::p_github       => 'github.com/mserrano-dev/DOCS-MSERRANO',
+//                ),
             );
         }
         return $return;

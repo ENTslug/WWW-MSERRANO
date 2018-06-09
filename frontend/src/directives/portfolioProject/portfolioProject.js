@@ -5,7 +5,6 @@ angular.module("www.directives")
                 replace: true,
                 templateUrl: 'frontend/src/directives/portfolioProject/portfolioProject.html',
                 scope: {
-                    key: '@',
                     info: '=',
                 },
                 link: linkFn,
@@ -14,17 +13,21 @@ angular.module("www.directives")
 
             // -- Functions -- //
             function linkFn(scope, elem, attrs) {
-                elem.css({
-                    "background": __background_url(scope.key),
-                    "background-size": "cover",
-                });
+                var key = scope.info[Const.P.Key];
+                scope.template = {
+                    thumbnail: __background_url(key),
+                    org: scope.info[Const.P.Organization],
+                    url: (scope.info[Const.P.Url] === Const.P.IsPrivate ? '-' : scope.info[Const.P.Url]),
+                    title: 'title_' + key,
+                    description: 'description_' + key,
+                };
             }
 
             // -- Helpers -- //
             function __background_url(key) {
                 var base_path = '/resources/portfolio/' + key + '/';
-                var filename = key + '_thumb_lo.png';
+                var filename = key + '_thumb_hi.png';
 
-                return "url('" + base_path + filename + "')";
+                return base_path + filename;
             }
         });

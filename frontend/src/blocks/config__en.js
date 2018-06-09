@@ -8,7 +8,7 @@ angular.module("www.blocks")
                 , "footer_info": "Engineered in Watsonville, CA. Mark Anthony Serrano. Est {{ year }}."
                         // project title
                 , "title_cygnus": "Cygnus Management, LLC"
-                , "title_corpwww": "www.hospitalitypulse.net (2014-2017)"
+                , "title_hpl_com": "www.hospitalitypulse.net (2014-2017)"
                 , "title_pulsemobile": "pulseMobile"
                 , "title_internalc": "Internal Console 2 (2015-2018)"
                 , "title_pulsebooker": "pulseBooker Consumer Version"
@@ -18,5 +18,17 @@ angular.module("www.blocks")
                 , "title_devops": "DevOps"
                 , "title_www": "WWW-MSERRANO"
                 , "title_docs": "DOCS-MSERRANO"
+                        // project description
+                , "description_cygnus": "Cygnus Management, LLC. This is a description. This is a description. This is a description. This is a description. "
+                , "description_hpl_com": "www.hospitalitypulse.net (2014-2017). This is a description. This is a description. This is a description. This is a description. "
+                , "description_pulsemobile": "pulseMobile. This is a description. This is a description. This is a description. This is a description. "
+                , "description_internalc": "Internal Console 2 (2015-2018). This is a description. This is a description. This is a description. This is a description. This is a description. "
+                , "description_pulsebooker": "pulseBooker Consumer Version. This is a description. This is a description. This is a description. This is a description. This is a description. "
+                , "description_pulselink": "pulseLink (2018). This is a description. This is a description. This is a description. This is a description. This is a description. "
+                , "description_pulsebooker_cro": "pulseBooker Central Reservation Office (CRO). This is a description. This is a description. This is a description. This is a description. This is a description. This is a description. "
+                , "description_lab": "LAB-MSERRANO. This is a description. This is a description. This is a description. "
+                , "description_devops": "DevOps. This is a description. This is a description. This is a description. "
+                , "description_www": "WWW-MSERRANO. This is a description. This is a description. This is a description. "
+                , "description_docs": "DOCS-MSERRANO. This is a description. This is a description. This is a description. "
             });
         });
