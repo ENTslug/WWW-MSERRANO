@@ -1,15 +1,18 @@
 @import 'Const';
 
 .page--landing {
+    $offset-toolbar: $height-toolbar * (0 - 1);
+    $offset-content: $height-toolbar * ($scroll-factor - 1);
+    $offset-content-margin: $height-toolbar * ($scroll-factor - 0);
 
-    .page__toolbar {
-        transform: translate3d(0px, -54px, 0px);
+    &.Safari .page__toolbar {
+        transform: translate3d(0px, $offset-toolbar, 0px);
 
         &.force-show-navbar {
             transform: translate3d(0px, 0px, 0px) !important;
         }
         &.force-show-footer {
-            transform: translate3d(0px, -54px, 0px)  !important;
+            transform: translate3d(0px, $offset-toolbar, 0px)  !important;
         }
     }
     .action-menu {
@@ -30,18 +33,17 @@
         .sitedown__text {
         }
     }
-    .page__content {
-        margin-top: -44.28px;
-        margin-bottom: -44.28px;
+    &.Safari .page__content {
+        margin-top: -1 * $offset-content-margin;
+        margin-bottom: -1 * $offset-content-margin;
 
-        transform: translate3d(0px, -9px, 0px);
-    }
-    .page__content {
+        transform: translate3d(0px, $offset-content, 0px);
+
         &.force-show-navbar {
-            transform: translate3d(0px, 44.28px, 0px) !important;
+            transform: translate3d(0px, $offset-content-margin, 0px) !important;
         }
         &.force-show-footer {
-            transform: translate3d(0px, -9px, 0px) !important;
+            transform: translate3d(0px, $offset-content, 0px) !important;
         }
     }
 
