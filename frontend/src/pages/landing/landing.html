@@ -1,7 +1,14 @@
 <div class="page--landing"
      layout="column">
-    <www-mserrano-toolbar></www-mserrano-toolbar>
+    <www-mserrano-toolbar class="page__toolbar"
+                          scroll-affix="scroll-container"
+                          affix-top="force-show-navbar"
+                          affix-bottom="force-show-footer"></www-mserrano-toolbar>
     <md-content class="page__content"
+                id="scroll-container"
+                scroll-affix="scroll-container"
+                affix-top="force-show-navbar"
+                affix-bottom="force-show-footer"
                 layout="column" layout-align="start center">
         <md-whiteframe class="action-menu md-whiteframe-12dp">
             <span class="sitedown__decor" translate="<"></span>
@@ -15,6 +22,6 @@
                                data-side="{{ $even === true}}"
                                data-info="project_info"></portfolio-project>
         </div>
-        <www-mserrano-footer></www-mserrano-footer>
+        <www-mserrano-footer class="page__footer"></www-mserrano-footer>
     </md-content>
 </div>

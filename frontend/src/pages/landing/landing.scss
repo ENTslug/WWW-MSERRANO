@@ -2,6 +2,16 @@
 
 .page--landing {
 
+    .page__toolbar {
+        transform: translate3d(0px, -54px, 0px);
+
+        &.force-show-navbar {
+            transform: translate3d(0px, 0px, 0px) !important;
+        }
+        &.force-show-footer {
+            transform: translate3d(0px, -54px, 0px)  !important;
+        }
+    }
     .action-menu {
         min-width: 36%;
         margin: $unit*8 0;
@@ -20,12 +30,27 @@
         .sitedown__text {
         }
     }
+    .page__content {
+        margin-top: -44.28px;
+        margin-bottom: -44.28px;
+
+        transform: translate3d(0px, -9px, 0px);
+    }
+    .page__content {
+        &.force-show-navbar {
+            transform: translate3d(0px, 44.28px, 0px) !important;
+        }
+        &.force-show-footer {
+            transform: translate3d(0px, -9px, 0px) !important;
+        }
+    }
+
 }
 
 .timeline {
     display: block;
     width: 100%;
-    
+
     .timeline__entry {
         min-height: 100px;
     }
