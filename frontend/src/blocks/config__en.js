@@ -5,7 +5,8 @@ angular.module("www.blocks")
                 , "app_label": "Mark Anthony Serrano"
                 , "sitedown": "Site Down"
                 , "more_info_message": "Working on it!"
-                , "footer_info": "Engineered in Watsonville, CA. Mark Anthony Serrano. Est {{ year }}."
+                , "copyleft": "{{ year }} Mark Anthony Serrano. All Personal Projects Open Sourced."
+                , "locally_engineered": "Engineered in Watsonville, CA."
                         // project title
                 , "title_cygnus": "Cygnus Management, LLC"
                 , "title_hpl_com": "www.hospitalitypulse.net (2014-2017)"

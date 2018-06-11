@@ -1,7 +1,10 @@
 angular.module("www.controllers")
-        .controller("LandingCtrl", function (Const, Midtier) {
+        .controller("LandingCtrl", function (Const, Midtier, Browser) {
             var _this = this;
 
+            _this.template = {
+                is_safari: (Browser.is_safari() === true),
+            };
             _this.portfolio = {
                 immutable: [],
             };

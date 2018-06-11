@@ -1,5 +1,5 @@
 angular.module("www.directives")
-        .directive("wwwMserranoFooter", function (Const) {
+        .directive("wwwMserranoFooter", function (Const, DateTime) {
             var directive_def = {
                 restrict: 'E',
                 replace: true,
@@ -10,6 +10,6 @@ angular.module("www.directives")
 
             // -- Functions -- //
             function linkFn(scope, elem, attrs) {
-                scope.established = '2017';
+                scope.current_year = DateTime.current_year;
             }
         });

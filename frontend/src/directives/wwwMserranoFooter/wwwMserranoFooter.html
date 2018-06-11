@@ -1,9 +1,39 @@
 <div class="footer"
-     layout="row" layout-align="space-between center">
-    <div class="footer__leftside"
-         layout="column" layout="begin begin">
-        <span translate="footer_info"
-              translate-values="{year: established}"></span>
+     layout="column" layout-align="start center">
+    <div class="top"
+         layout="column" layout-align="center center"
+         layout-gt-sm="row" layout-align-gt-sm="space-between center">
+        <div layout="row" layout="start start">
+            <span class="copy-left">&copy;</span>
+            <span translate="copyleft"
+                  translate-values="{year: current_year}"></span>
+        </div>
+        <span translate="locally_engineered"></span>
     </div>
-    <div class="footer__rightside"></div>
+    <div class="mid"
+         layout="row" layout-align="space-around center">
+        <div class="mid__block--permission">
+
+        </div>
+        <div class="mid__block--about-me">
+
+        </div>
+        <div class="mid__block--navigation">
+
+        </div>
+    </div>
+    <div class="bot">
+        <div class="contact-me"
+             layout="row" layout-align="center center">
+            <md-button class="contact-me__btn" aria-label="Resume">
+                <md-icon md-svg-icon="social:resume" aria-label="Resume"></md-icon>
+            </md-button>
+            <md-button class="contact-me__btn" aria-label="LinkedIn">
+                <md-icon md-svg-icon="social:linkedin" aria-label="LinkedIn"></md-icon>
+            </md-button>
+            <md-button class="contact-me__btn" aria-label="GitHub">
+                <md-icon md-svg-icon="social:github" aria-label="GitHub"></md-icon>
+            </md-button>
+        </div>
+    </div>
 </div>

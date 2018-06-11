@@ -1,16 +1,43 @@
 @import 'Const';
 
-$footer-color-prim: #262626;
+$footer-color-primary: #262626;
+$footer-color-accent: #2b2b2b;
 $footer-color-text: #c7c7c7;
 
 .footer {
-    min-height: 62px;
-    width: 100%;
-    background: $footer-color-prim;
-    color: $white;
 
-    .footer__leftside {
-        padding: $unit $unit*2;
+    &, .top, .mid, .bot {
+        width: 100%;
+    }
+
+    .top {
+        min-height: 62px;
+        padding: 0 $unit*2;
+        
+        line-height: 21px;
+        background: $footer-color-primary;
         color: $footer-color-text;
+
+        .copy-left {
+            padding: 0 $unit/4;
+            transform: scaleX(-1);
+        }
+    }
+    .mid {
+        min-height: 62px;
+        background: $footer-color-accent;
+    }
+    .bot {
+        background: $footer-color-primary;
+
+        .contact-me .contact-me__btn {
+            margin: 0;
+            padding: $unit 0;
+
+            md-icon {
+                min-height: $unit*4;
+                color: $footer-color-text;
+            }
+        }
     }
 }
