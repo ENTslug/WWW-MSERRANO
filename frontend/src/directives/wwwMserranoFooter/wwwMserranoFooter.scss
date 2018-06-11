@@ -1,19 +1,30 @@
 @import 'Const';
 
-$footer-color-primary: #262626;
-$footer-color-accent: #2b2b2b;
+$footer-color-theme: #020202;
+$footer-color-primary: rgba($footer-color-theme, 0.5);
+$footer-color-accent: rgba(#4d4d4d, 0.7);
 $footer-color-text: #c7c7c7;
+$footer-color-text-subtle: #b6b6b6;
+$footer-color-solid-bottom: #080808;
+
+@mixin footer-border-divider($side, $opacity) {
+    // utilize Sass interpolation #{}
+    border-#{$side}: 1px solid rgba($footer-color-text-subtle, $opacity);
+}
 
 .footer {
+    display: block;
+    background: $footer-color-accent;
 
-    &, .top, .mid, .bot {
+    &, .top, .mid, .bot, .bot .contact-me {
         width: 100%;
     }
-
     .top {
-        min-height: 62px;
-        padding: 0 $unit*2;
-        
+        display: flex;
+        padding: $unit*2;
+        border-top: 2px solid rgba($footer-color-text-subtle, 0.4);
+        @include footer-border-divider('bottom', 0.2);
+
         line-height: 21px;
         background: $footer-color-primary;
         color: $footer-color-text;
@@ -24,13 +35,51 @@ $footer-color-text: #c7c7c7;
         }
     }
     .mid {
-        min-height: 62px;
-        background: $footer-color-accent;
+        display: flex;
+        padding: $unit;
+        box-shadow: inset -15px 0px 100px 20px $footer-color-primary;
+
+        .title {
+            display: block;
+            color: $footer-color-text-subtle;
+            font-weight: 700;
+            margin: $unit;
+        }
+        .content {
+            color: $footer-color-text-subtle;
+            margin: $unit;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        [class^="mid__block"] {
+        }
+        .mid__block--permission {
+        }
+        .mid__block--about-me {
+        }
+        .mid__block--navigation {
+
+            ul {
+                margin: $unit;
+                padding: 0;
+                list-style: none;
+
+                li a {
+                    color: $footer-color-text;
+                }
+            }
+        }
     }
     .bot {
-        background: $footer-color-primary;
+        display: flex;
+        @include footer-border-divider('top', 0.4);
 
-        .contact-me .contact-me__btn {
+        background: $footer-color-solid-bottom;
+
+        .md-button {
             margin: 0;
             padding: $unit 0;
 

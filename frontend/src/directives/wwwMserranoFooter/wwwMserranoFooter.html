@@ -1,30 +1,49 @@
-<div class="footer"
-     layout="column" layout-align="start center">
+<div class="footer">
     <div class="top"
          layout="column" layout-align="center center"
-         layout-gt-sm="row" layout-align-gt-sm="space-between center">
+         layout-gt-xs="row" layout-align-gt-xs="space-between center">
         <div layout="row" layout="start start">
             <span class="copy-left">&copy;</span>
             <span translate="copyleft"
-                  translate-values="{year: current_year}"></span>
+                  translate-values="footer.copyleft"></span>
         </div>
         <span translate="locally_engineered"></span>
     </div>
     <div class="mid"
-         layout="row" layout-align="space-around center">
-        <div class="mid__block--permission">
-
+         layout="column" layout-align="space-around center"
+         layout-gt-xs="row" layout-align-gt-xs="space-around start">
+        <div class="mid__block--permission"
+             flex="30">
+            <span class="title"
+                  translate="title_permission"></span>
+            <div class="content">
+                <p class="message"
+                   translate="request_access_pass"></p>
+            </div>
         </div>
-        <div class="mid__block--about-me">
-
+        <div class="mid__block--about-me"
+             flex="55">
+            <span class="title"
+                  translate="title_about_me"></span>
+            <div class="content">
+                <p class="message"
+                   translate="short_bio"
+                   translate-values="footer.short_bio"></p>
+            </div>
         </div>
-        <div class="mid__block--navigation">
-
+        <div class="mid__block--navigation"
+             flex="15">
+            <span class="title"
+                  translate="title_navigation"></span>
+            <ul class="nav-list">
+                <li><a ng-bind="'DevOps'"></a></li>
+                <li><a ng-bind="'Lab'"></a></li>
+                <li><a ng-bind="'Portfolio'"></a></li>
+            </ul>
         </div>
     </div>
-    <div class="bot">
-        <div class="contact-me"
-             layout="row" layout-align="center center">
+    <div class="bot"
+         layout="row" layout-align="center center">
             <md-button class="contact-me__btn" aria-label="Resume">
                 <md-icon md-svg-icon="social:resume" aria-label="Resume"></md-icon>
             </md-button>
@@ -34,6 +53,5 @@
             <md-button class="contact-me__btn" aria-label="GitHub">
                 <md-icon md-svg-icon="social:github" aria-label="GitHub"></md-icon>
             </md-button>
-        </div>
     </div>
 </div>
