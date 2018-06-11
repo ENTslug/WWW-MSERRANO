@@ -6,12 +6,14 @@ angular.module("www.blocks")
                 , "sitedown": "Site Down"
                 , "more_info_message": "Working on it!"
                         // footer
-                , "copyleft": "{{ year }} Mark Anthony Serrano. All Personal Projects Open Sourced."
+                , "copyleft": "{{ year }} Mark Anthony Mendoza Serrano."
+                , "open_source": "All Personal Projects Open Sourced."
+                , "license": "Under the Apache License 2.0"
                 , "locally_engineered": "Engineered in Watsonville, CA."
                 , "title_permission": "See It All"
                 , "request_access_pass": "Request a 2-day access key to view my entire portfolio!"
                 , "title_about_me": "Committed to Santa Cruz County"
-                , "short_bio": "{{ counting }}+ years fullstack PHP/Javascript. Angular focused. Design inspired. Proud Banana Slug. Bachelor of Computer Science, UC Santa Cruz."
+                , "short_bio": "{{ counting }}+ years fullstack PHP/Javascript. Angular focused. Design inspired. SaltStack. Docker. Proud Banana Slug. Bachelor of Computer Science, UC Santa Cruz."
                 , "title_navigation": "Navigation"
                         // project title
                 , "title_cygnus": "Cygnus Management, LLC"

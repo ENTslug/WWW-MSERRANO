@@ -2,12 +2,21 @@
     <div class="top"
          layout="column" layout-align="center center"
          layout-gt-xs="row" layout-align-gt-xs="space-between center">
-        <div layout="row" layout="start start">
-            <span class="copy-left">&copy;</span>
-            <span translate="copyleft"
-                  translate-values="footer.copyleft"></span>
+        <div class="leftside"
+             layout="column" layout-align="center center"
+             layout-gt-xs="row" layout-align-gt-xs="space-between center">
+            <copy-left>
+                <span translate="copyleft"
+                      translate-values="footer.copyleft"></span>
+            </copy-left>
+            <span translate="open_source"></span>
         </div>
-        <span translate="locally_engineered"></span>
+        <div class="rightside">
+            <img class="us-flag"
+                 src="/resources/img/us.png" />
+            &nbsp;
+            <span translate="locally_engineered"></span>
+        </div>
     </div>
     <div class="mid"
          layout="column" layout-align="space-around center"
@@ -22,17 +31,22 @@
             </div>
         </div>
         <div class="mid__block--about-me"
-             flex="55">
-            <span class="title"
-                  translate="title_about_me"></span>
-            <div class="content">
-                <p class="message"
-                   translate="short_bio"
-                   translate-values="footer.short_bio"></p>
+             layout="row" layout="start start"
+             flex="50">
+            <img class="portrait"
+                 src="/resources/img/ENTslug.jpg" />            
+            <div layout="column">
+                <span class="title"
+                      translate="title_about_me"></span>
+                <div class="content">
+                    <p class="message"
+                       translate="short_bio"
+                       translate-values="footer.short_bio"></p>
+                </div>
             </div>
         </div>
         <div class="mid__block--navigation"
-             flex="15">
+             flex="20">
             <span class="title"
                   translate="title_navigation"></span>
             <ul class="nav-list">
@@ -44,14 +58,14 @@
     </div>
     <div class="bot"
          layout="row" layout-align="center center">
-            <md-button class="contact-me__btn" aria-label="Resume">
-                <md-icon md-svg-icon="social:resume" aria-label="Resume"></md-icon>
-            </md-button>
-            <md-button class="contact-me__btn" aria-label="LinkedIn">
-                <md-icon md-svg-icon="social:linkedin" aria-label="LinkedIn"></md-icon>
-            </md-button>
-            <md-button class="contact-me__btn" aria-label="GitHub">
-                <md-icon md-svg-icon="social:github" aria-label="GitHub"></md-icon>
-            </md-button>
+        <md-button class="contact-me__btn" aria-label="Resume">
+            <md-icon md-svg-icon="social:resume" aria-label="Resume"></md-icon>
+        </md-button>
+        <md-button class="contact-me__btn" aria-label="LinkedIn">
+            <md-icon md-svg-icon="social:linkedin" aria-label="LinkedIn"></md-icon>
+        </md-button>
+        <md-button class="contact-me__btn" aria-label="GitHub">
+            <md-icon md-svg-icon="social:github" aria-label="GitHub"></md-icon>
+        </md-button>
     </div>
 </div>
