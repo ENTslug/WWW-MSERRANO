@@ -1,9 +1,9 @@
 angular.module("www.directives")
         .directive("wwwMserranoFooter", function (Const, DateTime) {
             var directive_def = {
-                restrict: 'E',
+                restrict: "E",
                 replace: true,
-                templateUrl: 'frontend/src/directives/wwwMserranoFooter/wwwMserranoFooter.html',
+                templateUrl: "frontend/src/directives/wwwMserranoFooter/wwwMserranoFooter.html",
                 link: linkFn,
             };
             return directive_def;
@@ -13,9 +13,14 @@ angular.module("www.directives")
                 scope.footer = {// data for translate-values
                     copyleft: {year: DateTime.current_year},
                     short_bio: {counting: calc_exp_since(2014)},
-                    input_email: '',
+                    input_email: "",
                     //https://www.w3.org/TR/html5/forms.html#valid-e-mail-address
                     regex_valid_email: /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+                    list_navigation: [
+                        {url: Const.Url.repo_devops, desc: "DevOps github page", label: "DevOps"},
+                        {url: Const.Url.repo_lab, desc: "LAB-MSERRANO github page", label: "Lab"},
+                        {url: Const.Url.repo_www, desc: "WWW-MSERRANO github page", label: "Portfolio"},
+                    ],
                 };
                 scope.css = {
                     invalid_email: css_invalid_email,

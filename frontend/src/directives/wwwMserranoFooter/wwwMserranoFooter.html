@@ -74,11 +74,19 @@
              flex="20">
             <span class="title"
                   translate="title_navigation"></span>
-            <ul class="nav-list">
-                <li><a ng-bind="'DevOps'"></a></li>
-                <li><a ng-bind="'Lab'"></a></li>
-                <li><a ng-bind="'Portfolio'"></a></li>
-            </ul>
+            <div class="nav-list"
+                 layout="row" layout-align="start start" layout-wrap
+                 layout-gt-xs="column" layout-align-gt-xs="column center">
+                <div class="nav-list__item"
+                     ng-repeat="item in footer.list_navigation"
+                     flex="25">
+                    <md-button class="item__btn" aria-label="{{item.desc}}"
+                               ng-href="{{item.url}}"
+                               target="_blank">
+                        <span ng-bind="item.label | translate"></span>
+                    </md-button>
+                </div>
+            </div>
         </div>
     </div>
     <div class="bot"

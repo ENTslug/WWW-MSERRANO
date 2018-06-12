@@ -16,6 +16,7 @@ $footer-color-err-red: $red-bower;
 .footer {
     display: block;
     background: $footer-color-accent;
+    text-shadow: -1px 1px 2px $black;
 
     &, .top, .mid, .bot, .bot .contact-me {
         width: 100%;
@@ -46,13 +47,17 @@ $footer-color-err-red: $red-bower;
 
         .title {
             display: block;
-            color: $footer-color-text-subtle;
-            font-weight: 700;
             margin: $unit;
+            font-weight: 700;
+            color: $footer-color-text-subtle;
+            cursor: default;
+            touch-callout: none;
+            user-select: none;
         }
         .content {
-            color: $footer-color-text-subtle;
             margin: $unit;
+            font-size: 14px;
+            color: $footer-color-text-subtle;
 
             p {
                 margin: 0;
@@ -60,7 +65,7 @@ $footer-color-err-red: $red-bower;
         }
 
         [class^="mid__block"] {
-            max-height: auto;
+            max-height: fit-content;
         }
         .mid__block--permission {
             display: block;
@@ -83,6 +88,7 @@ $footer-color-err-red: $red-bower;
 
                     &:after {
                         color: transparent;
+                        text-shadow: none;
                     }
                 }
                 .input__field {
@@ -132,6 +138,11 @@ $footer-color-err-red: $red-bower;
             }
         }
         .mid__block--about-me {
+            @include layout('xs') {
+                @include footer-border-divider('top', 0.3);
+                @include footer-border-divider('bottom', 0.3);
+            }
+
             .content {
                 margin-top: 0;
             }
@@ -139,6 +150,7 @@ $footer-color-err-red: $red-bower;
                 height: 126px;
                 width: 126px;
                 margin: $unit;
+                border-radius: $unit/2;
 
                 background: url(/resources/img/ENTslug.jpg);
                 background-repeat: no-repeat;
@@ -146,13 +158,38 @@ $footer-color-err-red: $red-bower;
             }
         }
         .mid__block--navigation {
+            width: 100%;
 
-            ul {
+            .title {
+                @include layout('xs') {
+                    text-align: center;
+                }
+            }
+            .nav-list {
+                width: 100%;
                 margin: $unit;
                 padding: 0;
                 list-style: none;
 
-                li a {
+                .nav-list__item {
+                    max-height: fit-content;
+                    width: 100%;
+                }
+                .item__btn {
+                    width: 90%;
+
+                    margin: 0 0 0 $unit*-1;
+                    padding: 0 $unit*1.5;
+                    @include layout('gt-xs') {
+                        min-height: 20px;
+                        max-height: 20px;
+                        line-height: 20px;
+
+                        text-align: left;
+                        padding: 0 $unit*2;
+                    }
+
+                    text-transform: inherit;
                     color: $footer-color-text-subtle;
                 }
             }

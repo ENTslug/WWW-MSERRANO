@@ -48,10 +48,15 @@ class www_constants extends page_base {
                 'docs'            => cst_portfolio::key_docs,
             ),
             'Url'            => array(
-                'GitHub'   => 'https://github.com/mserrano-dev',
-                'LinkedIn' => 'https://www.linkedin.com/in/serrano2',
-                'Resume'   => 'https://s3.us-west-1.amazonaws.com/mserrano-public/WWW-MSERRANO/Thank%20you%20for%20viewing%21.pdf',
-                'Twitter'  => 'https://twitter.com/ENTslug',
+                'GitHub'      => 'https://github.com/mserrano-dev',
+                'LinkedIn'    => 'https://www.linkedin.com/in/serrano2',
+                'Resume'      => 'https://s3.us-west-1.amazonaws.com/mserrano-public/WWW-MSERRANO/Thank%20you%20for%20viewing%21.pdf',
+                'Twitter'     => 'https://twitter.com/ENTslug',
+                //
+                'portfolio'   => 'https://markanthonyserrano.com',
+                'repo_devops' => 'https://github.com/mserrano-dev/DevOps',
+                'repo_lab'    => 'https://github.com/mserrano-dev/LAB-MSERRANO',
+                'repo_www'    => 'https://github.com/mserrano-dev/WWW-MSERRANO',
             ),
         );
         return $return;
