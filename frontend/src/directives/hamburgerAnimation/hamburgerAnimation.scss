@@ -1,0 +1,10 @@
+@import 'Const';
+
+.hamburger {
+    outline-width: 0;
+    padding: 20px 30px 14px;
+
+    .hamburger-inner:before, .hamburger-inner:after, .hamburger-inner {
+        background-color: $white;
+    }
+}

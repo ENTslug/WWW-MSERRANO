@@ -2,14 +2,16 @@
      detect-browser
      layout="column">
     <www-mserrano-toolbar class="page__toolbar"
+                          ng-class="{'pin-to-top': (toolbar.show_menu === true)}"
                           scroll-affix="scroll-container"
-                          data-affix-condition="{{ page.template.is_safari }}"
+                          data-affix-condition="{{ page.template.is_safari}}"
                           data-affix-top="force-show-navbar"
                           data-affix-bottom="force-show-footer"></www-mserrano-toolbar>
     <md-content class="page__content"
+                ng-class="{'mobile-menu-is-active': (toolbar.show_menu === true)}"
                 id="scroll-container"
                 scroll-affix="scroll-container"
-                data-affix-condition="{{ page.template.is_safari }}"
+                data-affix-condition="{{page.template.is_safari}}"
                 data-affix-top="force-show-navbar"
                 data-affix-bottom="force-show-footer"
                 layout="column" layout-align="start center">
@@ -22,9 +24,10 @@
              layout="column">
             <portfolio-project class="timeline__entry"
                                ng-repeat="project_info in page.portfolio.immutable"
-                               data-side="{{ $even === true }}"
+                               data-side="{{$even === true}}"
                                data-info="project_info"></portfolio-project>
         </div>
-        <www-mserrano-footer class="page__footer"></www-mserrano-footer>
+        <www-mserrano-footer class="page__footer"
+                             ng-class="{'pin-to-bottom': (toolbar.show_menu === true)}"></www-mserrano-footer>
     </md-content>
 </div>

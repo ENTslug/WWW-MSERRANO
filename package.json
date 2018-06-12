@@ -14,7 +14,8 @@
     "angular-mocks": "1.6.10",
     "angular-route": "1.6.10",
     "angular-sanitize": "1.6.10",
-    "angular-translate": "2.17.1"
+    "angular-translate": "2.17.1",
+    "hamburgers": "0.9.3"
   },
   "scripts": {
     "preinstall": "(yarn global list | grep -q 'webpack') && : || yarn global add webpack",

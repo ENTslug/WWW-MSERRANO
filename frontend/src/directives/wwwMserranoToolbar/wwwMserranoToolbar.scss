@@ -1,6 +1,7 @@
 @import 'Const';
 
 md-toolbar.www-mserrano-toolbar {
+    outline: 0;
     background-color: rgba($color-primary, 0.6);
     border-bottom: 6px solid rgba($color-secondary, 0.6);
     box-shadow: 
@@ -8,6 +9,55 @@ md-toolbar.www-mserrano-toolbar {
         0 8px 10px 1px rgba(0,0,0,.14), 
         0 3px 14px 2px rgba(0,0,0,.12);
 }
-.toolbar .toolbar__btn md-icon {
-    height: 36px;
+.toolbar {
+    padding: 0;
+    .toolbar__title {
+        padding: 0 $unit;
+        @include layout('gt-xs') {
+            padding: 0 $unit*2;
+        }
+
+        .custom-breakpoint--else {
+            @media screen and (max-width: 350px) {
+                display: none;
+            }
+        }
+        .custom-breakpoint--mobile {
+            @media screen and (min-width: 350px) {
+                display: none;
+            }
+        }
+    }
+    .toolbar__btn md-icon {
+        height: 36px;
+    }
+    .toolbar__menu--desktop {
+        @include layout('xs') {
+            display: none;
+        }
+    }
+    .toolbar__menu--mobile {
+
+        .toolbar__btn {
+            margin: 0;
+            padding: 0;
+        }
+
+        @include layout('gt-xs') {
+            display: none;
+        }
+    }
+}
+body {
+    md-bottom-sheet {
+        max-height: 80%;
+        padding: 0;
+        margin-bottom: $unit*10;
+
+        overflow-y: scroll;
+        background: transparent;
+    }
+    md-backdrop.md-opaque {
+        opacity: 0.9;
+    }
 }

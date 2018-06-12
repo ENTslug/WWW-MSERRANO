@@ -1,25 +1,39 @@
 <md-toolbar class="www-mserrano-toolbar md-primary"
+            ng-click="toolbar.hide_mobile_menu()"
             md-scroll-shrink
             md-shrink-speed-factor="0.82">
     <div class="toolbar md-toolbar-tools"
          layout="row" layout-align="start center">
-        <h2 flex md-truncate>
-            <span translate="app_label"></span>
+        <div class="toolbar__menu--mobile">
+            <md-button class="toolbar__btn" aria-label="Mobile Menu"
+                       ng-click="toolbar.toggle_mobile_menu(); $event.stopPropagation()">
+                <hamburger-animation data-is-active="{{toolbar.show_menu}}"></hamburger-animation>
+            </md-button>
+        </div>
+        <h2 class="toolbar__title"
+            flex md-truncate>
+            <span class="custom-breakpoint--else"
+                  translate="app_label"></span>
+            <span class="custom-breakpoint--mobile"
+                  translate="app_label_short"></span>
         </h2>
-        <md-button class="toolbar__btn" aria-label="Resume"
-                   ng-href="{{Const.Url.Resume}}"
-                   target="_blank">
-            <md-icon md-svg-icon="social:resume" aria-label="Resume"></md-icon>
-        </md-button>
-        <md-button class="toolbar__btn" aria-label="LinkedIn"
-                   ng-href="{{Const.Url.LinkedIn}}"
-                   target="_blank">
-            <md-icon md-svg-icon="social:linkedin" aria-label="LinkedIn"></md-icon>
-        </md-button>
-        <md-button class="toolbar__btn" aria-label="GitHub"
-                   ng-href="{{Const.Url.GitHub}}"
-                   target="_blank">
-            <md-icon md-svg-icon="social:github" aria-label="GitHub"></md-icon>
-        </md-button>
+        <div class="toolbar__menu--desktop"
+             layout="row" layout-align="start center">
+            <md-button class="toolbar__btn" aria-label="Resume"
+                       ng-href="{{Const.Url.Resume}}"
+                       target="_blank">
+                <md-icon md-svg-icon="social:resume" aria-label="Resume"></md-icon>
+            </md-button>
+            <md-button class="toolbar__btn" aria-label="LinkedIn"
+                       ng-href="{{Const.Url.LinkedIn}}"
+                       target="_blank">
+                <md-icon md-svg-icon="social:linkedin" aria-label="LinkedIn"></md-icon>
+            </md-button>
+            <md-button class="toolbar__btn" aria-label="GitHub"
+                       ng-href="{{Const.Url.GitHub}}"
+                       target="_blank">
+                <md-icon md-svg-icon="social:github" aria-label="GitHub"></md-icon>
+            </md-button>
+        </div>
     </div>
 </md-toolbar>

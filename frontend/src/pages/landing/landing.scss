@@ -46,7 +46,30 @@
             transform: translate3d(0px, $offset-content, 0px) !important;
         }
     }
+    .page__toolbar {
+        &.pin-to-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9001;
+        }
+    }
+    .page__content {
+        &.mobile-menu-is-active {
+            margin-top: 10.84px !important;
+        }
+    }
+    .page__footer {
+        transition: all 0.2s ease-out;
 
+        opacity: 1.0;
+        transform: translateX(0);
+
+        &.pin-to-bottom {
+            opacity: 0;
+            transform: translateX(42px);
+        }
+    }
 }
 
 .timeline {

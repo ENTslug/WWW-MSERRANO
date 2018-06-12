@@ -3,6 +3,7 @@ angular.module("www.blocks")
             $translateProvider.translations("en", {
                 "": ""
                 , "app_label": "Mark Anthony Serrano"
+                , "app_label_short": "Mark Serrano"
                 , "sitedown": "Site Down"
                 , "more_info_message": "Working on it!"
                         // footer

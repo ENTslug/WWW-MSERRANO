@@ -3577,6 +3577,10 @@ grunt@~0.4.1:
     underscore.string "~2.2.1"
     which "~1.0.5"
 
+hamburgers@0.9.3:
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/hamburgers/-/hamburgers-0.9.3.tgz#73b3d299652a028647ca68b2957df172c76cc636"
+
 handlebars@^4.0.1:
   version "4.0.11"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.0.11.tgz#630a35dfe0294bc281edae6ffc5d329fc7982dcc"
