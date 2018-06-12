@@ -47,6 +47,12 @@ class www_constants extends page_base {
                 'www'             => cst_portfolio::key_www,
                 'docs'            => cst_portfolio::key_docs,
             ),
+            'Url'            => array(
+                'GitHub'   => 'https://github.com/mserrano-dev',
+                'LinkedIn' => 'https://www.linkedin.com/in/serrano2',
+                'Resume'   => 'https://s3.us-west-1.amazonaws.com/mserrano-public/WWW-MSERRANO/Thank%20you%20for%20viewing%21.pdf',
+                'Twitter'  => 'https://twitter.com/ENTslug',
+            ),
         );
         return $return;
     }

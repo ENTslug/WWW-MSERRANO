@@ -6,13 +6,19 @@
         <h2 flex md-truncate>
             <span translate="app_label"></span>
         </h2>
-        <md-button class="toolbar__btn" aria-label="Resume">
+        <md-button class="toolbar__btn" aria-label="Resume"
+                   ng-href="{{Const.Url.Resume}}"
+                   target="_blank">
             <md-icon md-svg-icon="social:resume" aria-label="Resume"></md-icon>
         </md-button>
-        <md-button class="toolbar__btn" aria-label="LinkedIn">
+        <md-button class="toolbar__btn" aria-label="LinkedIn"
+                   ng-href="{{Const.Url.LinkedIn}}"
+                   target="_blank">
             <md-icon md-svg-icon="social:linkedin" aria-label="LinkedIn"></md-icon>
         </md-button>
-        <md-button class="toolbar__btn" aria-label="GitHub">
+        <md-button class="toolbar__btn" aria-label="GitHub"
+                   ng-href="{{Const.Url.GitHub}}"
+                   target="_blank">
             <md-icon md-svg-icon="social:github" aria-label="GitHub"></md-icon>
         </md-button>
     </div>

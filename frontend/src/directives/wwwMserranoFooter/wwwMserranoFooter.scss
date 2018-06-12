@@ -6,6 +6,7 @@ $footer-color-accent: rgba(#4d4d4d, 0.7);
 $footer-color-text: #c7c7c7;
 $footer-color-text-subtle: #b6b6b6;
 $footer-color-solid-bottom: #080808;
+$footer-color-err-red: $red-bower;
 
 @mixin footer-border-divider($side, $opacity) {
     // utilize Sass interpolation #{}
@@ -33,11 +34,15 @@ $footer-color-solid-bottom: #080808;
             height: 11px;
             width: 16px;
         }
+        .copy-left {
+            padding-right: $unit;
+        }
     }
     .mid {
         display: flex;
         padding: $unit;
         box-shadow: inset -15px 0px 100px 20px $footer-color-primary;
+        color: $footer-color-text-subtle;
 
         .title {
             display: block;
@@ -55,18 +60,89 @@ $footer-color-solid-bottom: #080808;
         }
 
         [class^="mid__block"] {
+            max-height: auto;
         }
         .mid__block--permission {
+            display: block;
+            max-height: 150px;
+
+            .input-wrapper {
+                margin: $unit*2 0 0 0;
+            }
+            .input {
+                width: 85%;
+                @include layout('xs') {
+                    width: 95%;
+                }
+                margin: $unit*2 0 0 $unit/2;
+                font-weight: 700;
+
+                .input__label {
+                    padding: $unit/2 0;
+                    color: $footer-color-text;
+
+                    &:after {
+                        color: transparent;
+                    }
+                }
+                .input__field {
+                    color: $white;
+                    font-size: 15px;
+                    border-color: $footer-color-text;
+                }
+                .md-errors-spacer {
+                    min-height: 0;
+                }
+            }
+            .input.md-input-invalid {
+                .input__label:after {
+                    color: $footer-color-err-red;
+                }
+                .input__field {
+                    border-color: $footer-color-err-red;
+                }
+            }
+            .send-request-btn {
+                height: 31px;
+                min-width: 50px;
+                margin-top: 14px;
+                transition: all 0.42s ease;
+                border: 1px solid $footer-color-text-subtle;
+                border-bottom: 2px solid $footer-color-text-subtle;
+                color: $color-secondary-dark0;
+                cursor: not-allowed;
+
+                &.disabled {
+                    border-color: $footer-color-text;
+                    color: $footer-color-text;
+                    cursor: not-allowed;
+                    text-decoration: line-through;
+                }
+                &.invalid-email {
+                    border-color: $footer-color-err-red;
+                    color: $footer-color-err-red;
+                    cursor: not-allowed;
+                    text-decoration: none;
+                }
+                &.valid-email {
+                    border-color: #00A861;
+                    color: #00c0ac;
+                    cursor: pointer;
+                }
+            }
         }
         .mid__block--about-me {
             .content {
                 margin-top: 0;
             }
             .portrait {
-                width: 100px;
-                height: 100px;
-                padding: 6px;
-                margin: 0 $unit;
+                height: 126px;
+                width: 126px;
+                margin: $unit;
+
+                background: url(/resources/img/ENTslug.jpg);
+                background-repeat: no-repeat;
+                background-size: 100%;
             }
         }
         .mid__block--navigation {
@@ -77,7 +153,7 @@ $footer-color-solid-bottom: #080808;
                 list-style: none;
 
                 li a {
-                    color: $footer-color-text;
+                    color: $footer-color-text-subtle;
                 }
             }
         }

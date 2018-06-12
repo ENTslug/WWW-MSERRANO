@@ -11,10 +11,11 @@ angular.module("www.blocks")
                 , "license": "Under the Apache License 2.0"
                 , "locally_engineered": "Engineered in Watsonville, CA."
                 , "title_permission": "See It All"
-                , "request_access_pass": "Request a 2-day access key to view my entire portfolio!"
+                , "request_access_pass": "Request a 2-day access key to view my full portfolio!"
                 , "title_about_me": "Committed to Santa Cruz County"
                 , "short_bio": "{{ counting }}+ years fullstack PHP/Javascript. Angular focused. Design inspired. SaltStack. Docker. Proud Banana Slug. Bachelor of Computer Science, UC Santa Cruz."
                 , "title_navigation": "Navigation"
+                , "email": "Enter Email"
                         // project title
                 , "title_cygnus": "Cygnus Management, LLC"
                 , "title_hpl_com": "www.hospitalitypulse.net (2014-2017)"
