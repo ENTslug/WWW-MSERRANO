@@ -20,6 +20,7 @@ class www_constants extends page_base {
                 'Fail'    => cst_infrastructure::fail,
             ),
             'P'              => array(
+                'ComingSoon'   => cst_portfolio::p_coming_soon,
                 'GitHub'       => cst_portfolio::p_github,
                 'HasAccess'    => cst_portfolio::p_has_access,
                 'IsPrivate'    => cst_portfolio::p_is_private,
@@ -57,6 +58,7 @@ class www_constants extends page_base {
                 'repo_devops' => 'https://github.com/mserrano-dev/DevOps',
                 'repo_lab'    => 'https://github.com/mserrano-dev/LAB-MSERRANO',
                 'repo_www'    => 'https://github.com/mserrano-dev/WWW-MSERRANO',
+                'repo_docs'   => cst_portfolio::p_coming_soon,
             ),
         );
         return $return;

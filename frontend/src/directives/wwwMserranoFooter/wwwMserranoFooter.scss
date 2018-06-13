@@ -152,9 +152,11 @@ $footer-color-err-red: $red-bower;
                 margin: $unit;
                 border-radius: $unit/2;
 
-                background: url(/resources/img/ENTslug.jpg);
+                background: url('/resources/img/ENTslug.jpg');
                 background-repeat: no-repeat;
                 background-size: 100%;
+
+                cursor: url('/resources/icon/thumbs-up-white.svg'), auto;
             }
         }
         .mid__block--navigation {
@@ -174,6 +176,10 @@ $footer-color-err-red: $red-bower;
                 .nav-list__item {
                     max-height: fit-content;
                     width: 100%;
+
+                    &.coming-soon .item__btn {
+                        cursor: help;
+                    }
                 }
                 .item__btn {
                     width: 90%;
@@ -210,5 +216,27 @@ $footer-color-err-red: $red-bower;
                 color: $footer-color-text;
             }
         }
+    }
+}
+md-tooltip[md-visible="footer.show_tooltip"] {
+    margin: 0 0 0 $unit*10 !important;
+    position: relative;
+    border-radius: .4em;
+    padding: $unit $unit*2;
+    border-bottom-left-radius: 0;
+    
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 4%;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-top-color: rgb(97,97,97);
+        border-bottom: 0;
+        border-left: 0;
+        margin-left: -4.75px;
+        margin-bottom: -10px;
     }
 }

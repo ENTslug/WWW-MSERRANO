@@ -1,9 +1,28 @@
 @import 'Const';
 
-.portfolio-project-wrapper {
-}
 .portfolio-project {
-    
-    .md-card-image {
+    min-height: 100px;
+    min-width: 100px;
+    margin: $unit*4;
+    @include layout('gt-sm') {
+        max-width: 50%;
+        margin: $unit*2;
+    }
+    background: $white;
+    border: 0.75px dashed rgba($color-primary, 1.0);
+
+    md-card-content {
+        padding-right: 0;
+    }
+    .project__thumbnail {
+        width: 100%;
+        box-shadow: inset -15px 0px 100px 20px rgba(2, 2, 2, 0.5);
+        $project-thumbnail-border-size: 1px;
+        background-position: $project-thumbnail-border-size*-1 $project-thumbnail-border-size*-1 !important;
+        border: $project-thumbnail-border-size dashed rgba($color-secondary, 1);
+    }
+    md-card-actions, md-card-actions .first {
+        margin-top: 0 !important;
+        padding-top: 0;
     }
 }

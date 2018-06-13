@@ -58,7 +58,11 @@
         <div class="mid__block--about-me"
              layout="row" layout="start start"
              flex="50">
-            <div class="portrait"></div>
+            <div class="portrait"
+                 id="myPortrait"
+                 ng-mouseenter="footer.portrait_msg = '#SeaDubs';"
+                 ng-mouseleave="footer.show_tooltip = false;">
+            </div>
             <div layout="column"
                  flex="75">
                 <span class="title"
@@ -78,10 +82,12 @@
                  layout="row" layout-align="start start" layout-wrap
                  layout-gt-xs="column" layout-align-gt-xs="column center">
                 <div class="nav-list__item"
+                     ng-class="{'coming-soon': (css.under_construction(item.url) === true)}"
+                     ng-click="footer.toggle_tooltip(item.url)"
                      ng-repeat="item in footer.list_navigation"
                      flex="25">
                     <md-button class="item__btn" aria-label="{{item.desc}}"
-                               ng-href="{{item.url}}"
+                               ng-attrs-href="{{css.under_construction(item.url) ? '' : item.url}}"
                                target="_blank">
                         <span ng-bind="item.label | translate"></span>
                     </md-button>

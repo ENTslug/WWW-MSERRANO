@@ -1,6 +1,29 @@
-<div class="portfolio-project-wrapper">
-    <div class="portfolio-project">
-        <span translate="{{ template.title }}"></span>
-        
-    </div>
-</div>
+<md-card class="portfolio-project"
+         md-theme="default" md-theme-watch>
+    <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline"
+                  ng-bind="project.title | translate"></span>
+            <span class="md-subhead"
+                  ng-bind="project.org"></span>
+        </md-card-title-text>
+    </md-card-title>
+    <md-card-content layout="row" layout-align="space-between">
+        <div class="project__thumbnail md-media-xl card-media">
+        </div>
+        <md-card-actions layout="column" layout-align="start start">
+            <md-button class="md-icon-button first" aria-label="Link to Project">
+                <md-icon md-svg-icon="project:link" aria-label="Link to Project"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="Project GitHub Repo">
+                <md-icon md-svg-icon="project:github" aria-label="Project GitHub Repo"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="More Project Details">
+                <md-icon md-svg-icon="project:desc" aria-label="More Project Details"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="View Private Details">
+                <md-icon md-svg-icon="project:lock" aria-label="View Private Details"></md-icon>
+            </md-button>
+        </md-card-actions>
+    </md-card-content>
+</md-card>
