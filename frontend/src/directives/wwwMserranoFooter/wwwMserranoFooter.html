@@ -87,7 +87,7 @@
                      ng-repeat="item in footer.list_navigation"
                      flex="25">
                     <md-button class="item__btn" aria-label="{{item.desc}}"
-                               ng-attrs-href="{{css.under_construction(item.url) ? '' : item.url}}"
+                               ng-href="{{css.under_construction(item.url) ? '' : item.url}}"
                                target="_blank">
                         <span ng-bind="item.label | translate"></span>
                     </md-button>

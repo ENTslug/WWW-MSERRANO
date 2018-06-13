@@ -11,18 +11,82 @@
     background: $white;
     border: 0.75px dashed rgba($color-primary, 1.0);
 
+    md-card-title {
+        .md-headline {
+            color: $color-primary;
+        }
+        .md-subhead {
+            md-icon {
+                height: $unit*2;
+                min-height: $unit*2;
+                line-height: $unit*2;
+            }
+        }
+    }
     md-card-content {
         padding-right: 0;
     }
     .project__thumbnail {
         width: 100%;
         box-shadow: inset -15px 0px 100px 20px rgba(2, 2, 2, 0.5);
+        text-align: center;
+
         $project-thumbnail-border-size: 1px;
         background-position: $project-thumbnail-border-size*-1 $project-thumbnail-border-size*-1 !important;
         border: $project-thumbnail-border-size dashed rgba($color-secondary, 1);
+
+        .lock-image {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+
+            img {
+                width: 70px;
+                margin: auto;
+                padding: $unit*3;
+                outline: 0;
+            }
+            &:hover img {
+                animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+                transform: translate3d(0, 0, 0);
+                backface-visibility: hidden;
+                perspective: 1000px;
+            }
+
+            @keyframes shake {
+                10%, 90% {
+                    transform: translate3d(-1px, 0, 0);
+                }
+
+                20%, 80% {
+                    transform: translate3d(2px, 0, 0);
+                }
+
+                30%, 50%, 70% {
+                    transform: translate3d(-4px, 0, 0);
+                }
+
+                40%, 60% {
+                    transform: translate3d(4px, 0, 0);
+                }
+            }
+        }
     }
-    md-card-actions, md-card-actions .first {
-        margin-top: 0 !important;
-        padding-top: 0;
+    md-card-actions {
+        md-icon:hover {
+            color: $color-secondary;
+        }
+        .md-icon-button[disabled] md-icon {
+            color: #d2d2d2;
+            cursor: default;
+        }
+        
+        margin-top: 0;
+        
+        .md-button:first-child {
+            margin-top: 0 !important;
+            padding-top: 0;
+        }
     }
 }

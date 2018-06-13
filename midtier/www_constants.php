@@ -25,6 +25,7 @@ class www_constants extends page_base {
                 'HasAccess'    => cst_portfolio::p_has_access,
                 'IsPrivate'    => cst_portfolio::p_is_private,
                 'Key'          => cst_portfolio::p_key,
+                'Note'         => cst_portfolio::p_note,
                 'ProjectInfo'  => cst_portfolio::p_project_info,
                 'NotAvail'     => cst_portfolio::p_not_avail,
                 'Organization' => cst_portfolio::p_organization,

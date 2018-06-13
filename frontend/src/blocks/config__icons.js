@@ -8,8 +8,7 @@ angular.module("www.blocks")
                     //
                     .iconSet('project:link', 'resources/feather/external-link.svg', 24)
                     .iconSet('project:github', 'resources/feather/github.svg', 24)
-                    .iconSet('project:desc', 'resources/feather/info.svg', 24)
-                    .iconSet('project:lock', 'resources/feather/lock.svg', 24)
-                    .iconSet('project:unlock', 'resources/feather/unlock.svg', 24)
+                    .iconSet('project:desc', 'resources/feather/more-horizontal.svg', 24)
                     .iconSet('project:video', 'resources/feather/film.svg', 24)
+                    .iconSet('project:at-sign', 'resources/feather/at-sign.svg', 24)
         });

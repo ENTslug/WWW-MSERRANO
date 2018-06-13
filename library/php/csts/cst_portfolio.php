@@ -7,6 +7,7 @@ interface cst_portfolio {
     const p_has_access        = 'has_access';
     const p_is_private        = 'is_private';
     const p_key               = 'key';
+    const p_note              = 'note';
     const p_project_info      = 'project_info';
     const p_not_avail         = 'n/a';
     const p_organization      = 'organization';

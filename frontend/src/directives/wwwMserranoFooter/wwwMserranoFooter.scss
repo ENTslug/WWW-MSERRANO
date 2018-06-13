@@ -176,6 +176,7 @@ $footer-color-err-red: $red-bower;
                 .nav-list__item {
                     max-height: fit-content;
                     width: 100%;
+                    outline: 0;
 
                     &.coming-soon .item__btn {
                         cursor: help;
@@ -219,24 +220,26 @@ $footer-color-err-red: $red-bower;
     }
 }
 md-tooltip[md-visible="footer.show_tooltip"] {
-    margin: 0 0 0 $unit*10 !important;
+    margin: 0 0 0 $unit*8 !important;
     position: relative;
-    border-radius: .4em;
     padding: $unit $unit*2;
-    border-bottom-left-radius: 0;
-    
+
+    span {
+        font-size: 14px;
+        font-weight: bold;
+    }
     &:after {
         content: '';
         position: absolute;
         bottom: 0;
-        left: 4%;
+        left: 0;
         width: 0;
         height: 0;
         border: 10px solid transparent;
         border-top-color: rgb(97,97,97);
         border-bottom: 0;
         border-left: 0;
-        margin-left: -4.75px;
+        margin-left: 10px;
         margin-bottom: -10px;
     }
 }

@@ -47,7 +47,7 @@
         </style>
         <link rel="stylesheet" href="vendor.mserrano.%_VENDOR-CSS_%.css">
     </head>
-    <body>
+    <body ng-view>
         <div class="pre-loaded pre-spinner container">
             <div class="dot-dot-dot">
                 <span class="dot one">.</span>
@@ -55,7 +55,6 @@
                 <span class="dot three">.</span>
             </div>
         </div>
-        <div ng-view></div>
         <script src="/vendor.mserrano.%_VENDOR-JS_%.js"></script>
         <script id="apploader" src="%_MSERRANO-DEV_%"></script>
     </body>
