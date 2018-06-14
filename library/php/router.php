@@ -27,7 +27,7 @@ class router {
     static private function get_class_instance($class_filepath, $class_name) {
         $return = null;
         if (file_exists($class_filepath) === true) {
-            require($class_filepath);
+            require_once($class_filepath);
 
             if (class_exists($class_name) === true) {
                 $instance = new $class_name();

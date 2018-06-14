@@ -28,6 +28,7 @@ angular.module("www.directives")
                     requires_access: (scope.info[Const.P.IsPrivate] === true),
                     how_to_unlock: how_to_unlock,
                     is_disabled: is_disabled,
+                    show_description: false,
                 };
 
                 var thumbnail = angular.element(elem[0].querySelector(".project__thumbnail"));

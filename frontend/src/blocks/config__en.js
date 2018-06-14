@@ -18,8 +18,8 @@ angular.module("www.blocks")
                 , "title_navigation": "Navigation"
                 , "email": "Enter Email"
                         // project title
-                , "title_cygnus": "Cygnus Management, LLC"
-                , "title_hpl_com": "www.hospitalitypulse.net (2014-2017)"
+                , "title_cygnus": "Cygnus Management, LLC (2014)"
+                , "title_hpl_com": "www.hospitalitypulse.com (2014-2017)"
                 , "title_pulsemobile": "pulseMobile (HITEC 2016)"
                 , "title_internalc": "Internal Console 2 (2015-2018)"
                 , "title_pulsebooker": "pulseBooker Consumer Version (ITB, HITEC 2017)"
