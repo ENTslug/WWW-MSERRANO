@@ -25,7 +25,10 @@
             </md-button>
         </div>
         <md-card-actions layout="column" layout-align="start start">
-            <md-button class="md-icon-button" aria-label="View Private Details">
+            <md-button class="md-icon-button" aria-label="View Private Details"
+                       open-video="muted loop autoplay"
+                       data-video-webm="{{project.video_webm}}"
+                       data-video-mp4="{{project.video_mp4}}">
                 <md-icon md-svg-icon="project:video" aria-label="View Private Details"></md-icon>
             </md-button>
             <md-button class="md-icon-button" aria-label="More Project Details">

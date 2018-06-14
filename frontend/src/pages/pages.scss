@@ -13,3 +13,6 @@ html, body {
         background: transparent;
     }
 }
+.Chrome video::-webkit-media-controls-overlay-play-button {
+    display: none;
+}

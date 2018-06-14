@@ -42,10 +42,6 @@ md-toolbar.www-mserrano-toolbar {
             margin: 0;
             padding: 0;
         }
-
-        @include layout('gt-xs') {
-            display: none;
-        }
     }
 }
 body {

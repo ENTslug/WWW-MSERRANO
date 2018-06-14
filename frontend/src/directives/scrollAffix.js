@@ -17,6 +17,11 @@ angular.module("www.directives")
                     parallax_const: 40,
                     scroll_info: null,
                 };
+                var _raf = window.requestAnimationFrame ||
+                        window.mozRequestAnimationFrame ||
+                        window.webkitRequestAnimationFrame ||
+                        window.msRequestAnimationFrame ||
+                        window.oRequestAnimationFrame;
 
                 if (settings.do_logic === true) {
                     var scroll_container = angular.element($document[0].getElementById(settings.scroll_id));
@@ -35,7 +40,7 @@ angular.module("www.directives")
                             "background-size": "auto " + (100 + settings.parallax_const) + "%",
                         });
                         scroll_container.on("scroll", __handle_parallax_effect);
-                        requestAnimationFrame(__animate);
+                        _raf(__animate);
                         set_transition(attrs.affixParallaxEffect);
                     }
 
@@ -46,6 +51,7 @@ angular.module("www.directives")
                 function __teardown() {
                     scroll_container.off("scroll", __handle_classname_at_top);
                     scroll_container.off("scroll", __handle_classname_at_bottom);
+                    scroll_container.off("scroll", __handle_parallax_effect);
                 }
                 function __handle_classname_at_top() {
                     var at_top_of_page = (scroll_container[0].scrollTop <= 0);
@@ -68,7 +74,7 @@ angular.module("www.directives")
                     settings.scroll_info = scroll_container[0];
                 }
                 function __animate() {
-                    requestAnimationFrame(__animate);
+                    _raf(__animate);
 
                     var scroll_info = {
                         position: scroll_container[0].scrollTop,

@@ -1,20 +1,6 @@
 @import 'Const';
 
 .page--landing {
-    $offset-toolbar: $height-toolbar * (0 - 1);
-    $offset-content: $height-toolbar * ($scroll-factor - 1);
-    $offset-content-margin: $height-toolbar * ($scroll-factor - 0);
-
-    &.Safari .page__toolbar {
-        transform: translate3d(0px, $offset-toolbar, 0px);
-
-        &.force-show-navbar {
-            transform: translate3d(0px, 0px, 0px) !important;
-        }
-        &.force-show-footer {
-            transform: translate3d(0px, $offset-toolbar, 0px)  !important;
-        }
-    }
     .action-menu {
         min-width: 36%;
         margin: $unit*8 0;
@@ -31,19 +17,6 @@
             font-weight: 600;
         }
         .sitedown__text {
-        }
-    }
-    &.Safari .page__content {
-        margin-top: -1 * $offset-content-margin;
-        margin-bottom: -1 * $offset-content-margin;
-
-        transform: translate3d(0px, $offset-content, 0px);
-
-        &.force-show-navbar {
-            transform: translate3d(0px, $offset-content-margin, 0px) !important;
-        }
-        &.force-show-footer {
-            transform: translate3d(0px, $offset-content, 0px) !important;
         }
     }
     .page__toolbar {
@@ -68,6 +41,35 @@
         &.pin-to-bottom {
             opacity: 0;
             transform: translateX(42px);
+        }
+    }
+}
+.Safari .page--landing {
+    $offset-toolbar: $height-toolbar * (0 - 1);
+    $offset-content: $height-toolbar * ($scroll-factor - 1);
+    $offset-content-margin: $height-toolbar * ($scroll-factor - 0);
+    
+    .page__toolbar {
+        transform: translate3d(0px, $offset-toolbar, 0px);
+
+        &.force-show-navbar {
+            transform: translate3d(0px, 0px, 0px) !important;
+        }
+        &.force-show-footer {
+            transform: translate3d(0px, $offset-toolbar, 0px)  !important;
+        }
+    }
+    #scroll-container.page__content {
+        margin-top: -1 * $offset-content-margin;
+        margin-bottom: -1 * $offset-content-margin;
+
+        transform: translate3d(0px, $offset-content, 0px);
+
+        &.force-show-navbar {
+            transform: translate3d(0px, $offset-content-margin, 0px) !important;
+        }
+        &.force-show-footer {
+            transform: translate3d(0px, $offset-content, 0px) !important;
         }
     }
 }

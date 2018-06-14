@@ -16,10 +16,13 @@ angular.module("www.directives")
             function linkFn(scope, elem, attrs) {
                 var key = scope.info[Const.P.Key];
                 scope.project = {
+                    key: key,
                     org: scope.info[Const.P.Organization],
                     git_repo: scope.info[Const.P.GitHub],
                     url: scope.info[Const.P.Url],
                     note: scope.info[Const.P.Note],
+                    video_webm: __path(key, '_video.webm'),
+                    video_mp4: __path(key, '_video.mp4'),
                     //
                     title: "title_" + key,
                     description: "description_" + key,
@@ -33,7 +36,7 @@ angular.module("www.directives")
 
                 var thumbnail = angular.element(elem[0].querySelector(".project__thumbnail"));
                 thumbnail.css({
-                    "background": "url(" + __background_url(key) + ")",
+                    "background": "url(" + __path(key, '_thumb_hi.png') + ")",
                     "background-size": "cover",
                 });
 
@@ -44,9 +47,9 @@ angular.module("www.directives")
                 function is_disabled(key) {
                     return (scope.project[key] !== Const.P.NotAvail);
                 }
-                function __background_url(key) {
-                    var base_path = "/resources/portfolio/" + key + "/";
-                    var filename = key + "_thumb_hi.png";
+                function __path(key, extension) {
+                    var base_path = "/resources/portfolio/" + key;
+                    var filename = "/" + key + extension;
 
                     return base_path + filename;
                 }
