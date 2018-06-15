@@ -17,9 +17,8 @@
                 layout="column" layout-align="start center">
         <div class="timeline"
              layout="column">
-            <portfolio-project class="timeline__entry"
+            <portfolio-project class="timeline__entry {{project_info[Const.P.Key]}} {{$even === true ? 'leftside' : 'rightside'}}"
                                ng-repeat="project_info in page.portfolio.immutable"
-                               data-side="{{$even === true}}"
                                data-info="project_info"></portfolio-project>
         </div>
         <www-mserrano-footer class="page__footer"

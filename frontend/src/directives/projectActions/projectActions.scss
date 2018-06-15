@@ -1,0 +1,36 @@
+@import 'Const';
+
+md-card-actions {
+    &.projectActions {
+        margin-top: 0;
+
+        .action-btn {
+            &:hover md-icon {
+                color: $color-secondary;
+            }
+            .md-icon-button[disabled] md-icon {
+                color: #d2d2d2;
+            }
+        }
+    }
+    &.projectActions[layout="column"] {
+        .action-btn {
+            &:first-child .md-button {
+                margin-top: 0 !important;
+                padding-top: 0;
+            }
+        }
+    }
+    &.projectActions[layout="row"] {
+
+        .action-btn {
+            margin: 0 12px !important;
+        }
+        .video-btn-wrapper .md-button {
+            margin: 0 !important;
+        }
+    }
+}
+md-tooltip.video-tooltip, md-tooltip.note-tooltip {
+    margin: 0 0 0 0 !important;
+}

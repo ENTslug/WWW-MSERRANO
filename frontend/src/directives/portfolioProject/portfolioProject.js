@@ -5,7 +5,7 @@ angular.module("www.directives")
                 replace: true,
                 templateUrl: "frontend/src/directives/portfolioProject/portfolioProject.html",
                 scope: {
-                    side: "@",
+                    side: "=",
                     info: "=",
                 },
                 link: linkFn,
@@ -33,7 +33,6 @@ angular.module("www.directives")
                     is_disabled: is_disabled,
                     show_description: false,
                     has_video: (scope.info[Const.P.HasDemo] === true),
-                    side: (scope.side === 'true' ? 'leftside' : 'rightside'),
                 };
 
                 var thumbnail = angular.element(elem[0].querySelector(".project__thumbnail"));

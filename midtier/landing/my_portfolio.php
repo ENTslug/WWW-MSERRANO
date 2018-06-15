@@ -111,8 +111,7 @@ class my_portfolio extends page_base {
                     cst_portfolio::p_url          => cst_portfolio::p_not_avail,
                     cst_portfolio::p_github       => 'https://github.com/mserrano-dev/DevOps',
                     cst_portfolio::p_is_private   => false,
-                    cst_portfolio::p_has_demo     => false,
-                    cst_portfolio::p_not_avail    => true,
+                    cst_portfolio::p_has_demo     => true,
                 ),
                 array(
                     cst_portfolio::p_key          => cst_portfolio::key_www,
@@ -120,18 +119,17 @@ class my_portfolio extends page_base {
                     cst_portfolio::p_url          => 'http://www.mserrano.net',
                     cst_portfolio::p_github       => 'https://github.com/mserrano-dev/WWW-MSERRANO',
                     cst_portfolio::p_is_private   => false,
-                    cst_portfolio::p_has_demo     => false,
-                    cst_portfolio::p_not_avail    => true,
+                    cst_portfolio::p_has_demo     => true,
                 ),
-                array(
-                    cst_portfolio::p_key          => cst_portfolio::key_docs,
-                    cst_portfolio::p_organization => cst_portfolio::org_mserrano,
-                    cst_portfolio::p_url          => 'http://docs.mserrano.net',
-                    cst_portfolio::p_github       => 'https://github.com/mserrano-dev/DOCS-MSERRANO',
-                    cst_portfolio::p_is_private   => false,
-                    cst_portfolio::p_has_demo     => false,
-                    cst_portfolio::p_not_avail    => true,
-                ),
+//                array(
+//                    cst_portfolio::p_key          => cst_portfolio::key_docs,
+//                    cst_portfolio::p_organization => cst_portfolio::org_mserrano,
+//                    cst_portfolio::p_url          => 'http://docs.mserrano.net',
+//                    cst_portfolio::p_github       => 'https://github.com/mserrano-dev/DOCS-MSERRANO',
+//                    cst_portfolio::p_is_private   => false,
+//                    cst_portfolio::p_has_demo     => false,
+//                    cst_portfolio::p_not_avail    => true,
+//                ),
             );
         }
         return $return;

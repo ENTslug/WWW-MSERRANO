@@ -1,0 +1,11 @@
+@import 'Const';
+
+.md-dialog-container {
+    md-dialog {
+        background: transparent;
+        box-shadow: none;
+    }
+    video {
+        height: 75%;
+    }
+}

@@ -7,13 +7,6 @@
     @include layout('gt-sm') {
         max-width: 42%;
         margin: $landing-gutter-size;
-
-        &.leftside {
-            margin-right: auto;
-        }
-        &.rightside {
-            margin-left: auto;
-        }
     }
     background: $white;
     border: 0.75px dashed rgba($color-primary, 1.0);
@@ -21,8 +14,15 @@
     md-card-title {
         .md-headline {
             color: $color-primary;
+            
+            @include layout('xs') {
+                font-size: 20px;
+            }
         }
         .md-subhead {
+            @include layout('xs') {
+                font-size: 13px;
+            }
             md-icon {
                 height: $unit*2;
                 min-height: $unit*2;
@@ -31,7 +31,9 @@
         }
     }
     md-card-content {
-        padding-right: 0;
+        @include layout('gt-xs') {
+            padding-right: 0;
+        }
     }
     .project__thumbnail {
         width: 100%;
@@ -40,6 +42,9 @@
 
         $project-thumbnail-border-size: 1px;
         background-position: $project-thumbnail-border-size*-1 $project-thumbnail-border-size*-1 !important;
+        @media screen and (max-width: 400px) {
+            background-position-x: 62% !important;
+        }        
         border: $project-thumbnail-border-size dashed rgba($color-secondary, 1);
 
         .lock-image {
@@ -80,22 +85,16 @@
             }
         }
     }
-    md-card-actions {
-        md-icon:hover {
-            color: $color-secondary;
-        }
-        .md-icon-button[disabled] md-icon {
-            color: #d2d2d2;
-        }
-
-        margin-top: 0;
-
-        .md-button:first-child {
-            margin-top: 0 !important;
-            padding-top: 0;
+    .project-action-menu[layout="column"] {
+        display: none;
+        @include layout('gt-xs') {
+            display: flex;
         }
     }
-}
-md-tooltip.video-tooltip, md-tooltip.note-tooltip {
-    margin: 0 0 0 0 !important;
+    .project-action-menu[layout="row"] {
+        display: flex;
+        @include layout('gt-xs') {
+            display: none;
+        }
+    }
 }

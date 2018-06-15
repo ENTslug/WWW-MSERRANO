@@ -1,22 +1,10 @@
 @import 'Const';
 
 .page--landing {
-    .action-menu {
-        min-width: 36%;
-        margin: $unit*8 0;
-        padding: $unit*4;
-
-        background: $white;
-        border-radius: $unit/4;
-        font-size: 32px;
-        text-align: center;
-
-        opacity: 0.96;
-
-        .sitedown__decor {
-            font-weight: 600;
-        }
-        .sitedown__text {
+    .devops.timeline__entry .project__thumbnail {
+        @include layout('xs') {
+            background: url('/resources/portfolio/devops/cowsay_thumb_hi.png') !important;
+            background-position-y: 62% !important;
         }
     }
     .page__toolbar {
@@ -30,6 +18,16 @@
     .page__content {
         &.mobile-menu-is-active {
             margin-top: 10.84px !important;
+        }
+        .portfolio-project {
+            @include layout('gt-sm') {
+                &.leftside {
+                    margin-right: auto;
+                }
+                &.rightside {
+                    margin-left: auto;
+                }
+            }
         }
     }
     .page__footer {
@@ -79,7 +77,7 @@
 
     display: block;
     width: 100%;
-    
+
     @include layout('gt-sm') {
         margin-top: $landing-gutter-size + $timeline-project-offset;
     }

@@ -1,4 +1,4 @@
-<md-card class="portfolio-project {{template.side}}"
+<md-card class="portfolio-project"
          md-theme="default" md-theme-watch>
     <md-card-title>
         <md-card-title-text>
@@ -24,44 +24,9 @@
                 <img src="resources/img/locked.png" />
             </md-button>
         </div>
-        <md-card-actions layout="column" layout-align="start start">
-            <div class="video-btn-wrapper">
-                <md-button class="md-icon-button" aria-label="View Private Details"
-                           ng-disabled="(template.has_video === false)"
-                           open-video="muted"
-                           data-video-webm="{{project.video_webm}}"
-                           data-video-mp4="{{project.video_mp4}}">
-                    <md-icon md-svg-icon="project:video" aria-label="View Private Details"></md-icon>
-                </md-button>
-                <md-tooltip class="video-tooltip"
-                            ng-if="template.requires_access === true"
-                            md-direction="left">
-                    <span ng-show="template.has_video === true"
-                          translate="public_userfacing"></span>
-                    <span ng-show="template.has_video === false"
-                          translate="locked_next_step"></span>
-                </md-tooltip>
-            </div>
-            <md-button class="md-icon-button" aria-label="More Project Details">
-                <md-icon md-svg-icon="project:desc" aria-label="More Project Details"></md-icon>
-            </md-button>
-            <md-button class="md-icon-button" aria-label="Link to Project"
-                       ng-disabled="(template.is_disabled('url') === false)"
-                       ng-href="{{project.url}}"
-                       target="_blank">
-                <md-tooltip class="note-tooltip"
-                            ng-if="project.note"
-                            md-direction="left">
-                    <span ng-bind="project.note"></span>
-                </md-tooltip>
-                <md-icon md-svg-icon="project:link" aria-label="Link to Project"></md-icon>
-            </md-button>
-            <md-button class="md-icon-button" aria-label="Project GitHub Repo"
-                       ng-disabled="(template.is_disabled('git_repo') === false)"
-                       ng-href="{{project.git_repo}}"
-                       target="_blank">
-                <md-icon md-svg-icon="project:github" aria-label="Project GitHub Repo"></md-icon>
-            </md-button>
-        </md-card-actions>
+        <project-actions class="project-action-menu"
+                         layout="column" layout-align="start start"></project-actions>
     </md-card-content>
+    <project-actions class="project-action-menu"
+                     layout="row" layout-align="center start"></project-actions>
 </md-card>
