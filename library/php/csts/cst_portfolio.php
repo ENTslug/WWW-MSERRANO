@@ -5,6 +5,7 @@ interface cst_portfolio {
     const p_coming_soon       = 'coming_soon';
     const p_github            = 'github';
     const p_has_access        = 'has_access';
+    const p_has_demo          = 'has_demo';
     const p_is_private        = 'is_private';
     const p_key               = 'key';
     const p_note              = 'note';

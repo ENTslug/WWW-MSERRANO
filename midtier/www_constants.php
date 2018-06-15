@@ -23,6 +23,7 @@ class www_constants extends page_base {
                 'ComingSoon'   => cst_portfolio::p_coming_soon,
                 'GitHub'       => cst_portfolio::p_github,
                 'HasAccess'    => cst_portfolio::p_has_access,
+                'HasDemo'      => cst_portfolio::p_has_demo,
                 'IsPrivate'    => cst_portfolio::p_is_private,
                 'Key'          => cst_portfolio::p_key,
                 'Note'         => cst_portfolio::p_note,

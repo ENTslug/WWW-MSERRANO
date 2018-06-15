@@ -48,7 +48,7 @@
     $offset-toolbar: $height-toolbar * (0 - 1);
     $offset-content: $height-toolbar * ($scroll-factor - 1);
     $offset-content-margin: $height-toolbar * ($scroll-factor - 0);
-    
+
     .page__toolbar {
         transform: translate3d(0px, $offset-toolbar, 0px);
 
@@ -75,10 +75,19 @@
 }
 
 .timeline {
+    $timeline-project-offset: 150px;
+
     display: block;
     width: 100%;
-
+    
+    @include layout('gt-sm') {
+        margin-top: $landing-gutter-size + $timeline-project-offset;
+    }
     .timeline__entry {
         min-height: 100px;
+
+        @include layout('gt-sm') {
+            margin-top: -1 * $timeline-project-offset;
+        }
     }
 }

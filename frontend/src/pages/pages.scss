@@ -16,3 +16,14 @@ html, body {
 .Chrome video::-webkit-media-controls-overlay-play-button {
     display: none;
 }
+md-tooltip {
+    position: relative;
+    padding: $unit $unit*2;
+
+    span {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+.md-button {
+}

@@ -32,6 +32,8 @@ angular.module("www.directives")
                     how_to_unlock: how_to_unlock,
                     is_disabled: is_disabled,
                     show_description: false,
+                    has_video: (scope.info[Const.P.HasDemo] === true),
+                    side: (scope.side === 'true' ? 'leftside' : 'rightside'),
                 };
 
                 var thumbnail = angular.element(elem[0].querySelector(".project__thumbnail"));
@@ -48,10 +50,15 @@ angular.module("www.directives")
                     return (scope.project[key] !== Const.P.NotAvail);
                 }
                 function __path(key, extension) {
+                    var _return = '/resources/img/sitedown_thumb_hi.png';
+
                     var base_path = "/resources/portfolio/" + key;
                     var filename = "/" + key + extension;
 
-                    return base_path + filename;
+                    if (scope.info[Const.P.NotAvail] !== true) {
+                        _return = base_path + filename;
+                    }
+                    return _return;
                 }
             }
 

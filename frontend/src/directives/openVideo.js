@@ -24,9 +24,20 @@ angular.module("www.directives")
 
                     el.video = create_html5_video();
                     el.video.css({
-                        "display": "none"
+                        "display": "block"
                     });
-                    el.body.append(el.video);
+
+                    document.addEventListener('webkitfullscreenchange', exitHandler, false);
+                    document.addEventListener('mozfullscreenchange', exitHandler, false);
+                    document.addEventListener('fullscreenchange', exitHandler, false);
+                    document.addEventListener('MSFullscreenChange', exitHandler, false);
+
+                    function exitHandler() {
+                        if (__is_fullscreen() === false) {
+                            el.video[0].currentTime = 0;
+                            el.video[0].pause();
+                        }
+                    }
 
                     elem.on('click', __on_click);
                     elem.on('$destroy', __teardown);
@@ -37,8 +48,17 @@ angular.module("www.directives")
                     elem.off('click', __on_click);
                 }
                 function __on_click() {
+                    el.body.append(el.video);
                     enter_fullscreen(el.video[0]);
                     el.video[0].play();
+                }
+                function __is_fullscreen() {
+                    return ((false
+                            || (document.fullscreenElement && document.fullscreenElement !== null)
+                            || (document.webkitFullscreenElement && document.webkitFullscreenElement !== null)
+                            || (document.webkitCurrentFullScreenElement && document.webkitCurrentFullScreenElement !== null)
+                            || (document.mozFullScreenElement && document.mozFullScreenElement !== null)
+                            ) === true);
                 }
                 function create_html5_video() {
                     var _return = angular.element('<video ' + settings.options + '>'

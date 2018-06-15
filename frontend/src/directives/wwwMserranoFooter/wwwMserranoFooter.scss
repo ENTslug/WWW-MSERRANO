@@ -115,7 +115,7 @@ $footer-color-err-red: $red-bower;
                 transition: all 0.42s ease;
                 border: 1px solid $footer-color-text-subtle;
                 border-bottom: 2px solid $footer-color-text-subtle;
-                color: $color-secondary-dark0;
+                color: $color-secondary;
                 cursor: not-allowed;
 
                 &.disabled {
@@ -224,10 +224,6 @@ md-tooltip[md-visible="footer.show_tooltip"] {
     position: relative;
     padding: $unit $unit*2;
 
-    span {
-        font-size: 14px;
-        font-weight: bold;
-    }
     &:after {
         content: '';
         position: absolute;

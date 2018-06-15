@@ -5,8 +5,15 @@
     min-width: 100px;
     margin: $unit*4;
     @include layout('gt-sm') {
-        max-width: 50%;
-        margin: $unit*2;
+        max-width: 42%;
+        margin: $landing-gutter-size;
+
+        &.leftside {
+            margin-right: auto;
+        }
+        &.rightside {
+            margin-left: auto;
+        }
     }
     background: $white;
     border: 0.75px dashed rgba($color-primary, 1.0);
@@ -79,14 +86,16 @@
         }
         .md-icon-button[disabled] md-icon {
             color: #d2d2d2;
-            cursor: default;
         }
-        
+
         margin-top: 0;
-        
+
         .md-button:first-child {
             margin-top: 0 !important;
             padding-top: 0;
         }
     }
+}
+md-tooltip.video-tooltip, md-tooltip.note-tooltip {
+    margin: 0 0 0 0 !important;
 }

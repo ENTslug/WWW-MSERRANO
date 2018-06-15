@@ -17,7 +17,9 @@ angular.module("www.blocks")
                 , "short_bio": "{{ counting }}+ years fullstack PHP/Javascript. Angular focused. Design inspired. SaltStack. Docker. Proud Banana Slug. Bachelor of Computer Science, UC Santa Cruz."
                 , "title_navigation": "Navigation"
                 , "email": "Enter Email"
-                        // project title
+                        // project
+                , "public_userfacing": "View what is public"
+                , "locked_next_step": "Did you receive your activation email?"
                 , "title_cygnus": "Cygnus Management, LLC (2014)"
                 , "title_hpl_com": "www.hospitalitypulse.com (2014-2017)"
                 , "title_pulsemobile": "pulseMobile (HITEC 2016)"

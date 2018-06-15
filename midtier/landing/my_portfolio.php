@@ -42,6 +42,7 @@ class my_portfolio extends page_base {
                     cst_portfolio::p_url          => 'https://cygnusmgmt-production.herokuapp.com',
                     cst_portfolio::p_github       => 'https://github.com/mmserran/cygnusmgmt',
                     cst_portfolio::p_is_private   => false,
+                    cst_portfolio::p_has_demo     => true,
                 ),
                 array(
                     cst_portfolio::p_key          => cst_portfolio::key_hpl_com,
@@ -50,6 +51,7 @@ class my_portfolio extends page_base {
                     cst_portfolio::p_note         => 'May no longer be used',
                     cst_portfolio::p_github       => cst_portfolio::p_not_avail,
                     cst_portfolio::p_is_private   => false,
+                    cst_portfolio::p_has_demo     => true,
                 ),
                 array(
                     cst_portfolio::p_key          => cst_portfolio::key_pulsemobile,
@@ -58,6 +60,7 @@ class my_portfolio extends page_base {
                     cst_portfolio::p_note         => 'Intended for Mobile Devices only',
                     cst_portfolio::p_github       => cst_portfolio::p_not_avail,
                     cst_portfolio::p_is_private   => false,
+                    cst_portfolio::p_has_demo     => true,
                 ),
                 array(
                     cst_portfolio::p_key          => cst_portfolio::key_internalc,
@@ -66,6 +69,7 @@ class my_portfolio extends page_base {
                     cst_portfolio::p_note         => 'Just the login page is public',
                     cst_portfolio::p_github       => cst_portfolio::p_not_avail,
                     cst_portfolio::p_is_private   => true,
+                    cst_portfolio::p_has_demo     => true,
                 ),
                 array(
                     cst_portfolio::p_key          => cst_portfolio::key_pulsebooker,
@@ -74,6 +78,7 @@ class my_portfolio extends page_base {
                     cst_portfolio::p_note         => 'Also check out /#/pulsebooker2',
                     cst_portfolio::p_github       => cst_portfolio::p_not_avail,
                     cst_portfolio::p_is_private   => false,
+                    cst_portfolio::p_has_demo     => true,
                 ),
                 array(
                     cst_portfolio::p_key          => cst_portfolio::key_pulselink,
@@ -81,6 +86,7 @@ class my_portfolio extends page_base {
                     cst_portfolio::p_url          => cst_portfolio::p_not_avail,
                     cst_portfolio::p_github       => cst_portfolio::p_not_avail,
                     cst_portfolio::p_is_private   => true,
+                    cst_portfolio::p_has_demo     => false,
                 ),
                 array(
                     cst_portfolio::p_key          => cst_portfolio::key_pulsebooker_cro,
@@ -89,6 +95,7 @@ class my_portfolio extends page_base {
                     cst_portfolio::p_note         => 'Use property Opera 504 Lab',
                     cst_portfolio::p_github       => cst_portfolio::p_not_avail,
                     cst_portfolio::p_is_private   => false,
+                    cst_portfolio::p_has_demo     => true,
                 ),
                 array(
                     cst_portfolio::p_key          => cst_portfolio::key_lab,
@@ -96,6 +103,7 @@ class my_portfolio extends page_base {
                     cst_portfolio::p_url          => 'http://lab.mserrano.net',
                     cst_portfolio::p_github       => 'https://github.com/mserrano-dev/LAB-MSERRANO',
                     cst_portfolio::p_is_private   => false,
+                    cst_portfolio::p_has_demo     => true,
                 ),
                 array(
                     cst_portfolio::p_key          => cst_portfolio::key_devops,
@@ -103,6 +111,8 @@ class my_portfolio extends page_base {
                     cst_portfolio::p_url          => cst_portfolio::p_not_avail,
                     cst_portfolio::p_github       => 'https://github.com/mserrano-dev/DevOps',
                     cst_portfolio::p_is_private   => false,
+                    cst_portfolio::p_has_demo     => false,
+                    cst_portfolio::p_not_avail    => true,
                 ),
                 array(
                     cst_portfolio::p_key          => cst_portfolio::key_www,
@@ -110,6 +120,8 @@ class my_portfolio extends page_base {
                     cst_portfolio::p_url          => 'http://www.mserrano.net',
                     cst_portfolio::p_github       => 'https://github.com/mserrano-dev/WWW-MSERRANO',
                     cst_portfolio::p_is_private   => false,
+                    cst_portfolio::p_has_demo     => false,
+                    cst_portfolio::p_not_avail    => true,
                 ),
                 array(
                     cst_portfolio::p_key          => cst_portfolio::key_docs,
@@ -117,6 +129,8 @@ class my_portfolio extends page_base {
                     cst_portfolio::p_url          => 'http://docs.mserrano.net',
                     cst_portfolio::p_github       => 'https://github.com/mserrano-dev/DOCS-MSERRANO',
                     cst_portfolio::p_is_private   => false,
+                    cst_portfolio::p_has_demo     => false,
+                    cst_portfolio::p_not_avail    => true,
                 ),
             );
         }
