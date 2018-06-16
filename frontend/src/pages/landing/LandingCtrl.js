@@ -3,7 +3,7 @@ angular.module("www.controllers")
             var _this = this;
 
             _this.template = {
-                is_safari: (Browser.is_safari() === true),
+                is_apple: (Browser.is_safari() === true) || (Browser.is_iOS() === true),
             };
             _this.portfolio = {
                 immutable: [],

@@ -1,4 +1,8 @@
 <md-card class="portfolio-project"
+         ng-class="{
+             'leftside': (template.side === true),
+             'rightside': (template.side === false)
+         }"
          md-theme="default" md-theme-watch>
     <md-card-title>
         <md-card-title-text>
@@ -13,17 +17,20 @@
         </md-card-title-text>
     </md-card-title>
     <md-card-content layout="row" layout-align="space-between">
-        <div class="project__thumbnail md-media-xl card-media"
-             ng-hide="template.show_description === true"
-             ng-cloak
-             layout="column">
-            <md-button class="lock-image"
-                       ng-show="template.requires_access === true"
-                       ng-click="template.how_to_unlock()"
-                       aria-label="how to unlock full portfolio">
-                <img src="resources/img/locked.png" />
-            </md-button>
-        </div>
+        <reveal-animation data-direction="{{template.side === true}}"
+                          data-condition="template.show_description"
+                          data-backside-text="{{project.description}}">
+            <div class="project__thumbnail md-media-xl card-media"
+                 ng-cloak
+                 layout="column">
+                <md-button class="lock-image"
+                           ng-show="template.requires_access === true"
+                           ng-click="template.how_to_unlock()"
+                           aria-label="how to unlock full portfolio">
+                    <img src="resources/img/locked.png" />
+                </md-button>
+            </div>
+        </reveal-animation>
         <project-actions class="project-action-menu"
                          layout="column" layout-align="start start"></project-actions>
     </md-card-content>

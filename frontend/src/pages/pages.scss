@@ -13,9 +13,6 @@ html, body {
         background: transparent;
     }
 }
-.Chrome video::-webkit-media-controls-overlay-play-button {
-    display: none;
-}
 md-tooltip {
     position: relative;
     padding: $unit $unit*2;

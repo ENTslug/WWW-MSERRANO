@@ -1,0 +1,62 @@
+<md-card-actions class="projectActions">
+    <div class="action-btn-wrapper video-btn-wrapper"
+         flex-xs="25"
+         layout="row" layout-align="center center">
+        <md-button class="action-btn md-icon-button"
+                   aria-label="View Private Details"
+                   ng-disabled="(template.has_video === false)"
+                   open-video="muted autoplay playsinline webkit-playsinline controls"
+                   data-video-webm="{{project.video_webm}}"
+                   data-video-mp4="{{project.video_mp4}}">
+            <md-icon md-svg-icon="project:video" 
+                     aria-label="View Private Details"></md-icon>
+        </md-button>
+        <md-tooltip class="video-tooltip"
+                    ng-if="template.requires_access === true"
+                    md-direction="top">
+            <span ng-show="template.has_video === true"
+                  translate="public_userfacing"></span>
+            <span ng-show="template.has_video === false"
+                  translate="locked_next_step"></span>
+        </md-tooltip>
+    </div>
+    <div class="action-btn-wrapper"
+         flex-xs="25">
+        <md-button class="action-btn md-icon-button"
+                   ng-click="template.show_description = !template.show_description"
+                   aria-label="More Project Details"
+                   layout="row" layout-align="center center">
+            <md-icon md-svg-icon="project:desc" 
+                     aria-label="More Project Details"></md-icon>
+        </md-button>
+    </div>
+    <div class="action-btn-wrapper"
+         flex-xs="25">
+        <md-button class="action-btn  md-icon-button"
+                   aria-label="Link to Project"
+                   layout="row" layout-align="center center"
+                   ng-disabled="(template.is_disabled('url') === false)"
+                   ng-href="{{project.url}}"
+                   target="_blank">
+            <md-tooltip class="note-tooltip"
+                        ng-if="project.note"
+                        md-direction="top">
+                <span ng-bind="project.note"></span>
+            </md-tooltip>
+            <md-icon md-svg-icon="project:link" 
+                     aria-label="Link to Project"></md-icon>
+        </md-button>
+    </div>
+    <div class="action-btn-wrapper"
+         flex-xs="25">
+        <md-button class="action-btn  md-icon-button"
+                   aria-label="Project GitHub Repo"
+                   layout="row" layout-align="center center"
+                   ng-disabled="(template.is_disabled('git_repo') === false)"
+                   ng-href="{{project.git_repo}}"
+                   target="_blank">
+            <md-icon md-svg-icon="project:github" 
+                     aria-label="Project GitHub Repo"></md-icon>
+        </md-button>
+    </div>
+</md-card-actions>

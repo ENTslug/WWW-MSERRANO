@@ -1,0 +1,14 @@
+<div class="reveal-wrapper"
+     ng-class="{'do_animation': (condition === true)}">
+    <div class="reveal__side reveal__side--back">
+        <div class="backside-text">
+            <p ng-bind="backsideText | translate"></p>
+        </div>
+    </div>
+    <div class="reveal__side reveal__side--animated"
+         ng-class="{
+             'left': (direction === 'true'),
+             'right': (direction === 'false'),
+         }"
+         ng-transclude></div>
+</div>

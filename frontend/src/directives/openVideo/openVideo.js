@@ -39,7 +39,7 @@ angular.module("www.directives")
 
                 }
                 function create_html5_video() {
-                    var _return = '<video ' + settings.options + '>'
+                    var _return = '<video ' + settings.options + ' aria-label="project demo" video-size>'
                             + (settings.video.webm ? '<source src="%s" type="video/webm">'.replace('%s', settings.video.webm) : '')
                             + (settings.video.mp4 ? '<source src="%s" type="video/mp4">'.replace('%s', settings.video.mp4) : '')
                             + '</video>';

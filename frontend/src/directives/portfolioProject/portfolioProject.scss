@@ -1,12 +1,17 @@
 @import 'Const';
 
 .portfolio-project {
-    min-height: 100px;
-    min-width: 100px;
     margin: $unit*4;
     @include layout('gt-sm') {
         max-width: 42%;
         margin: $landing-gutter-size;
+
+        &.leftside {
+            margin-right: auto;
+        }
+        &.rightside {
+            margin-left: auto;
+        }
     }
     background: $white;
     border: 0.75px dashed rgba($color-primary, 1.0);
@@ -14,7 +19,7 @@
     md-card-title {
         .md-headline {
             color: $color-primary;
-            
+
             @include layout('xs') {
                 font-size: 20px;
             }
@@ -34,6 +39,9 @@
         @include layout('gt-xs') {
             padding-right: 0;
         }
+    }
+    reveal-animation {
+        width: 100%;
     }
     .project__thumbnail {
         width: 100%;

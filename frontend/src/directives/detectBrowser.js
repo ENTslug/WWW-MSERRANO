@@ -12,6 +12,7 @@ angular.module("www.directives")
                     'Chrome': (Browser.is_chrome() === true),
                     'Firefox': (Browser.is_firefox() === true),
                     'Safari': (Browser.is_safari() === true),
+                    'iOS': (Browser.is_iOS() === true),
                 };
                 add_browser_name_as_css_class(elem, info);
 

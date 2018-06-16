@@ -1,5 +1,5 @@
 angular.module("www.directives")
-        .directive("portfolioProject", function (Const) {
+        .directive("portfolioProject", function (Const, $timeout, $mdToast, $mdBottomSheet) {
             var directive_def = {
                 restrict: "E",
                 replace: true,
@@ -28,22 +28,41 @@ angular.module("www.directives")
                     description: "description_" + key,
                 };
                 scope.template = {
+                    side: (scope.side === true),
                     requires_access: (scope.info[Const.P.IsPrivate] === true),
-                    how_to_unlock: how_to_unlock,
                     is_disabled: is_disabled,
                     show_description: false,
                     has_video: (scope.info[Const.P.HasDemo] === true),
+                    how_to_unlock: how_to_unlock,
                 };
 
-                var thumbnail = angular.element(elem[0].querySelector(".project__thumbnail"));
-                thumbnail.css({
-                    "background": "url(" + __path(key, '_thumb_hi.png') + ")",
-                    "background-size": "cover",
+                $timeout(function () {
+                    var thumbnail = angular.element(elem[0].querySelector(".project__thumbnail"));
+                    thumbnail.css({
+                        "background": "url(" + __path(key, '_thumb_hi.png') + ")",
+                        "background-size": "cover",
+                    });
                 });
 
                 // -- Helpers -- //
                 function how_to_unlock() {
-                    console.log('hello world');
+                    var toast = $mdToast.simple()
+                            .textContent('You need permission')
+                            .action('REQUEST NOW')
+                            .highlightAction(true)
+
+                    $mdToast.show(toast).then(function (response) {
+                        if (response == 'ok') {
+                            show_mobile_menu();
+                        }
+                    });
+                }
+                function show_mobile_menu() {
+                    $mdBottomSheet.show({
+                        template: '<md-bottom-sheet>' +
+                                '    <www-mserrano-footer></www-mserrano-footer>' +
+                                '</md-bottom-sheet>'
+                    });
                 }
                 function is_disabled(key) {
                     return (scope.project[key] !== Const.P.NotAvail);

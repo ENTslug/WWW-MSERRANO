@@ -1,0 +1,42 @@
+@import 'Const';
+
+md-card-actions {
+    &.projectActions {
+        margin-top: 0;
+
+        .action-btn-wrapper {
+            &:hover md-icon {
+                color: $color-secondary;
+            }
+            .action-btn {
+                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
+            }
+            .action-btn[disabled] md-icon {
+                color: #d2d2d2;
+            }
+        }
+    }
+    &.projectActions[layout="column"] {
+        .action-btn-wrapper {
+            margin-bottom: $unit*2;
+            .action-btn {
+                margin: 0;
+            }
+            &:first-child .action-btn {
+                padding-top: 0;
+            }
+        }
+    }
+    &.projectActions[layout="row"] {
+        .action-btn-wrapper {
+            .action-btn {
+                margin: 0 !important;
+            }
+        }
+    }
+}
+md-tooltip.video-tooltip, md-tooltip.note-tooltip {
+    margin: 0 0 0 0 !important;
+}

@@ -1,0 +1,95 @@
+@import 'Const';
+
+.reveal-wrapper {
+    min-height: 200px;
+    @include layout('xs') {
+        min-height: 240px;
+    }
+    transform-style: preserve-3d;
+}
+.reveal__side {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+}
+.reveal__side--back {
+    display: block;
+    min-height: 200px;
+    padding-top: $unit;
+    @include layout('gt-xs') {
+        padding-top: $unit*2;
+    }
+    border-top: 1px solid;
+    
+    .backside-text {
+        display: none;
+        text-indent: $unit*4;
+        font-size: 16px;
+        p {
+            margin: 0;
+        }
+        @include layout('xs') {
+            font-size: 14px;
+        }
+    }
+}
+.reveal__side--animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    transition: all 1s ease-in-out;
+}
+.do_animation .reveal__side--back .backside-text {
+    display: block;
+}
+.do_animation .reveal__side--animated {
+    animation-name: do_animation_up;
+    @include layout('gt-sm') {
+        &.left {
+            animation-name: do_animation_left;
+        }
+        &.right {
+            animation-name: do_animation_right;
+        }
+    }
+}
+//https://raw.githubusercontent.com/daneden/animate.css/master/animate.css
+@keyframes do_animation_left {
+    40% {
+        opacity: 1;
+        transform: scale3d(0.475, 0.475, 0.475) translate3d(42px, 0, 0);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.1) translate3d(-2000px, 0, 0);
+        transform-origin: left center;
+    }
+}
+@keyframes do_animation_right {
+    40% {
+        opacity: 1;
+        transform: scale3d(0.475, 0.475, 0.475) translate3d(-42px, 0, 0);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.1) translate3d(2000px, 0, 0);
+        transform-origin: right center;
+    }
+}
+@keyframes do_animation_up {
+    20% {
+        transform: translate3d(0, -10px, 0);
+    }
+
+    40%,
+    45% {
+        opacity: 1;
+        transform: translate3d(0, 20px, 0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translate3d(0, -2000px, 0);
+    }
+}

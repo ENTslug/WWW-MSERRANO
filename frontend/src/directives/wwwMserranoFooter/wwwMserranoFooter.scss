@@ -183,7 +183,14 @@ $footer-color-err-red: $red-bower;
                     }
                 }
                 .item__btn {
-                    width: 90%;
+                    @media screen and (max-width: 400px) {
+                        font-size: 12px;
+                        
+                        $footer-nav-sm-btn: 68px;
+                        width: $footer-nav-sm-btn;
+                        min-width: $footer-nav-sm-btn;
+                        max-width: $footer-nav-sm-btn;
+                    }
 
                     margin: 0 0 0 $unit*-1;
                     padding: 0 $unit*1.5;
@@ -208,9 +215,13 @@ $footer-color-err-red: $red-bower;
 
         background: $footer-color-solid-bottom;
 
-        .md-button {
+        .contact-me__btn {
             margin: 0;
             padding: $unit 0;
+
+            @media screen and  (max-width: 400px) {
+                min-width: 62px;
+            }
 
             md-icon {
                 min-height: $unit*4;
@@ -219,7 +230,7 @@ $footer-color-err-red: $red-bower;
         }
     }
 }
-md-tooltip[md-visible="footer.show_tooltip"] {
+md-tooltip[md-visible="tooltip.show_it"] {
     margin: 0 0 0 $unit*8 !important;
     position: relative;
     padding: $unit $unit*2;

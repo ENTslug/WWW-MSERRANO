@@ -1,7 +1,8 @@
 <div class="footer">
     <div class="top"
          layout="column" layout-align="center center"
-         layout-gt-xs="row" layout-align-gt-xs="space-between center">
+         layout-gt-sm="row" layout-align-gt-sm="space-between center"
+         layout-gt-xs="column" layout-align-gt-xs="start center">
         <div class="leftside"
              layout="column" layout-align="center center"
              layout-gt-xs="row" layout-align-gt-xs="space-between center">
@@ -33,6 +34,7 @@
             <div class="input-wrapper"
                  layout="row" layout-align="start start">
                 <md-input-container class="input"
+                                    aria-label="request full access to my portfolio"
                                     flex>
                     <label class="input__label"
                            translate="email"></label>
@@ -40,8 +42,8 @@
                            name="inputEmail"
                            required
                            type="email"
-                           ng-pattern="footer.regex_valid_email"
-                           ng-model="footer.input_email">
+                           ng-pattern="full_access.regex_valid_email"
+                           ng-model="full_access.input_email">
                 </md-input-container>
                 <md-button class="send-request-btn md-accent"
                            ng-class="{
@@ -49,6 +51,7 @@
                                'valid-email': css.valid_email(requestPermission.inputEmail),
                                'disabled': css.disabled(requestPermission.inputEmail),
                            }"
+                           ng-click="full_access.request_full_access()"
                            ng-disabled="css.disabled(requestPermission.inputEmail)"
                            aria-label="request permission to view full portfolio">
                     <span translate="send"></span>
@@ -60,8 +63,8 @@
              flex="50">
             <div class="portrait"
                  id="myPortrait"
-                 ng-mouseenter="footer.portrait_msg = '#SeaDubs';"
-                 ng-mouseleave="footer.show_tooltip = false;">
+                 ng-mouseenter="tooltip.portrait_msg = '#SeaDubs';"
+                 ng-mouseleave="tooltip.show_it = false;">
             </div>
             <div layout="column"
                  flex="75">
@@ -83,10 +86,11 @@
                  layout-gt-xs="column" layout-align-gt-xs="column center">
                 <div class="nav-list__item"
                      ng-class="{'coming-soon': (css.under_construction(item.url) === true)}"
-                     ng-click="footer.toggle_tooltip(item.url)"
+                     ng-click="tooltip.under_construction_msg(item.url)"
                      ng-repeat="item in footer.list_navigation"
                      flex="25">
                     <md-button class="item__btn" aria-label="{{item.desc}}"
+                               md-truncate
                                ng-href="{{css.under_construction(item.url) ? '' : item.url}}"
                                target="_blank">
                         <span ng-bind="item.label | translate"></span>
@@ -102,17 +106,17 @@
                    target="_blank">
             <md-icon md-svg-icon="social:twitter" aria-label="Twitter"></md-icon>
         </md-button>
-        <md-button class="toolbar__btn" aria-label="Resume"
+        <md-button class="contact-me__btn" aria-label="Resume"
                    ng-href="{{Const.Url.Resume}}"
                    target="_blank">
             <md-icon md-svg-icon="social:resume" aria-label="Resume"></md-icon>
         </md-button>
-        <md-button class="toolbar__btn" aria-label="LinkedIn"
+        <md-button class="contact-me__btn" aria-label="LinkedIn"
                    ng-href="{{Const.Url.LinkedIn}}"
                    target="_blank">
             <md-icon md-svg-icon="social:linkedin" aria-label="LinkedIn"></md-icon>
         </md-button>
-        <md-button class="toolbar__btn" aria-label="GitHub"
+        <md-button class="contact-me__btn" aria-label="GitHub"
                    ng-href="{{Const.Url.GitHub}}"
                    target="_blank">
             <md-icon md-svg-icon="social:github" aria-label="GitHub"></md-icon>

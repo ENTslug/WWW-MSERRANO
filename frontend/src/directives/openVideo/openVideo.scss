@@ -2,10 +2,12 @@
 
 .md-dialog-container {
     md-dialog {
-        background: transparent;
+        background: rgba($black, 0.8);
         box-shadow: none;
     }
     video {
-        height: 75%;
+        margin: auto;
+        width: 100%;
+        overflow: hidden;
     }
 }

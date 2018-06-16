@@ -6,6 +6,9 @@
             background: url('/resources/portfolio/devops/cowsay_thumb_hi.png') !important;
             background-position-y: 62% !important;
         }
+        @media screen and (max-width: 300px) {
+            background-position-x: 10% !important;
+        }
     }
     .page__toolbar {
         &.pin-to-top {
@@ -18,16 +21,6 @@
     .page__content {
         &.mobile-menu-is-active {
             margin-top: 10.84px !important;
-        }
-        .portfolio-project {
-            @include layout('gt-sm') {
-                &.leftside {
-                    margin-right: auto;
-                }
-                &.rightside {
-                    margin-left: auto;
-                }
-            }
         }
     }
     .page__footer {
@@ -42,6 +35,7 @@
         }
     }
 }
+.iOS .page--landing,
 .Safari .page--landing {
     $offset-toolbar: $height-toolbar * (0 - 1);
     $offset-content: $height-toolbar * ($scroll-factor - 1);
@@ -71,7 +65,19 @@
         }
     }
 }
+.iOS .page--landing {
+    $offset-content: $height-toolbar * ($scroll-factor - 1);
 
+    #scroll-container.page__content {
+        &.force-show-footer {
+            transform: translate3d(0px, $offset-content - 77, 0px) !important;
+
+            @media (orientation: landscape) {
+                transform: translate3d(0px, $offset-content + 7, 0px) !important;
+            }
+        }
+    }
+}
 .timeline {
     $timeline-project-offset: 150px;
 
@@ -82,8 +88,6 @@
         margin-top: $landing-gutter-size + $timeline-project-offset;
     }
     .timeline__entry {
-        min-height: 100px;
-
         @include layout('gt-sm') {
             margin-top: -1 * $timeline-project-offset;
         }
