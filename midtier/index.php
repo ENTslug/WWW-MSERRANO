@@ -17,6 +17,8 @@ class index extends page_base {
             '%_MSERRANO-DEV_%' => sprintf('/apploader.min.js?%s', http_build_query($args)),
             '%_VENDOR-CSS_%'   => $this->uniq_fingerprint('vendor.mserrano.css'),
             '%_VENDOR-JS_%'    => $this->uniq_fingerprint('vendor.mserrano.js'),
+            '%_SEO-TITLE_%'    => cst_infrastructure::seo_title,
+            '%_SEO-DESC_%'     => cst_infrastructure::seo_desc,
         );
 
         $this->response = str_replace(
